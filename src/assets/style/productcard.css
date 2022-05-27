@@ -1,0 +1,104 @@
+.product-card
+{
+    /* margin: 1% 2% 5% 2%;
+    padding: 1%; */
+    /* text-align: left; */
+    /* border: 2px solid black;
+    text-align: center; */
+    /* width: 300px; */
+    /* background-color: aquamarine; */
+}
+.cardwidth
+{
+    width: 18rem;
+    margin: 0.76%;
+    /* border:0px; */
+    border-radius: 3%;
+    background-color: rgb(255, 255, 255);;
+}
+.cardwidth:hover
+{
+    /* width: 18rem;
+    margin: 0.76%;
+    border:0px;
+    border: 1px solid black; */
+}
+.card{
+    padding:12px;
+    border-radius: 2%;
+}
+/* .cardwidth img
+{
+    width: 18rem;
+    margin: 0.76%;
+} */
+
+.product-card h3
+{
+    margin: 1%;
+    text-align: left;
+    font-size: 20px;
+    /* font-weight: lighter; */
+}
+.product-card p
+{
+    margin: 1%;
+    text-align: left;
+    font-weight: 400;
+}
+.product-card button
+{
+margin: 1%;
+width: 102px;
+height: 35px;
+border: 0px;
+color: aliceblue;
+font-size: 15px;
+}
+.card-image{
+    /* border: 2px solid black; */
+    width: 80%;  
+    /* height:80%;    */
+    margin: 5% 10%;
+    /* padding: 0 10%;  */
+}
+.float-right{
+    float: right;
+}
+.btn{
+    font-size: 16px;
+    font-weight: 500;
+}
+.card-body 
+{
+    /* font-size: 20px;
+    font-weight: 600; */
+    background-color: rgb(239, 224, 202);
+    border-radius: 5px;
+    height: 100%;
+}
+/* .card:hover{
+    border: 2px solid black;
+} */
+.card-body h5
+{
+    font-size: 20px;
+    font-weight: 600;
+}
+.card-body p
+{
+    font-size: 16px;
+    font-weight: 400;
+}
+.card-body a
+{
+    /* font-size: 16px;
+    font-weight: 400; */
+    color: white;
+}
+/* .btn{
+    text-decoration: none;
+} */
+/* .btn:hover{
+    color:#9C2A2A;
+} */

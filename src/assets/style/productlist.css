@@ -1,0 +1,24 @@
+.main-container
+{
+    margin:5% 5%;
+}
+.profile-details{
+    margin: 0 5%;
+}
+.profile-details h3{
+    display: inline;
+    font-weight: 700;
+    font-size: 45px;
+    /* border: 1px solid black; */
+}
+.profile-details button{
+    float: right;
+    border: 0px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 150px;
+}
+/* .profile{
+    margin: 0 5%;
+} */
