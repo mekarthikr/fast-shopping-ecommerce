@@ -45,6 +45,10 @@ const getProduct = (product) => ({
   type: types.GET_SINGLE_PRODUCT,
   payload: product,
 });
+// const addCart = (product)=>({
+//   type: types.ADD_TO_CART,
+//   payload: product,
+// })
 
 export const loadUsers = () => {
   return function (dispatch) {
@@ -169,3 +173,18 @@ export const updateProduct = (product, id) => {
       .catch((error) => console.log(error));
   };
 };
+
+// export const addToCart = (product) => {
+//   return function (dispatch) {
+//     // axios
+//     //   .put(`${API_PRODUCTS}/${id}`, product)
+//     //   .then((resp) => {
+//     //     console.log("resp", resp);
+//     //     dispatch(productUpdated());
+//     //   })
+//     //   .catch((error) => console.log(error));
+//     // dispatch(addCart(product))
+//     // console.log(product)
+//   };
+// };
+

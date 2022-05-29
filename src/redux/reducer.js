@@ -5,6 +5,7 @@ const initialState = {
   products: [],
   product: {},
   loading: true,
+  cart:[],
   value:"true"
 };
 
@@ -50,6 +51,15 @@ const usersReducers = (state = initialState, action) => {
         product: action.payload,
         loading: false,
       };
+      case types.ADD_TO_CART:
+        return {
+          // ...state,
+          // product: action.payload,
+          // loading: false,
+          //           ...state,
+          // cart: initialState.cart,
+          // loading: false,
+        };
     default:
       return state;
   }

@@ -57,7 +57,7 @@ export default function AddProduct()
             </div>
             <div className='col edit-product-view'>
               <div className='bg-blue edit-product-card'>
-                <img src={image}/>
+                <img alt="product" src={image}/>
                 <h3 className='color-white'>{productname}</h3>
                 <p className='color-white'>{color}</p>
                 <p className='color-white'>{price}</p>
@@ -69,4 +69,4 @@ export default function AddProduct()
         </div>
     </>
   );
-}
+} 

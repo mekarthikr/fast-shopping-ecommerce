@@ -16,7 +16,7 @@ export function Login()
   
     const [user, setUser] = useState("");
   
-    useEffect(() => getUser(), []);
+    useEffect(() => getUser(), []);// eslint-disable-line react-hooks/exhaustive-deps
   
     const getUser = () => {
       axios.get(API).then((res) => {

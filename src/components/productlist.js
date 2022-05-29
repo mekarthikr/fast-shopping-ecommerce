@@ -35,13 +35,13 @@ export default function PersonList() {
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSingleUser(id));
-  }, []);
+  }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (user) {
       setState({ ...user });
     }
-  }, [user]);
+  }, [user]);// eslint-disable-line react-hooks/exhaustive-deps
   console.log(state);
   const editHandle = (e) => {
     e.preventDefault();

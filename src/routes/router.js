@@ -11,6 +11,7 @@ import Editproduct from "../components/editproduct";
 import Prototype from "../components/prototype";
 import AddProduct from "../components/addProduct";
 import Viewproduct from "../components/viewproduct";
+// import Cart from "../components/cart";
 
 export function Router() {
   return (
@@ -28,6 +29,7 @@ export function Router() {
         <Route path="/prototype" element={<Prototype />} />
         <Route path="/addProduct" element={<AddProduct />} />
         <Route path="/product/:id" element={<Viewproduct />} />
+        {/* <Route path="/cart/:id" element={<Cart />} /> */}
       </Routes>
     </BrowserRouter>
   );

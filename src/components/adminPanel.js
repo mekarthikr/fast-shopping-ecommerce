@@ -13,7 +13,7 @@ export default function Adminpanel()
   const { products } = useSelector((state) => state.data);
   useEffect(() => {
     dispatch(loadProducts());
-  }, []);
+  }, []);// eslint-disable-line react-hooks/exhaustive-deps
   const handleDelete = (id) => {
     console.log("id", id);
       dispatch(deleteProduct(id));
