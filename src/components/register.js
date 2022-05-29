@@ -37,7 +37,7 @@ export default function Register() {
           Hi <br /> Fellow Stranger{" "}
         </h1>
         <p>Please enter your details to create a new account</p>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} autocomplete="off">
           <div className="row">
             <div className="form-group col-md-6">
               <label>FIRST NAME</label>

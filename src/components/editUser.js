@@ -50,7 +50,7 @@ export default function Edituser() {
       <div className="login-block">
         <h1>Edit Profile</h1>
         <p>Enter the details that you like to edit</p>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} autocomplete="off">
           <div className="row">
             <div className="form-group col-md-6">
               <label>FIRST NAME</label>

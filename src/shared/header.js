@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../assets/style/header.css";
 import coll from "../assets/image/coll.svg";
 import remove from "../assets/image/remo.png";
+import { Link } from "react-router-dom";
 
 export default class Header extends Component {
   render() {
@@ -12,9 +13,10 @@ export default class Header extends Component {
           <a className="navbar-brand" >
             <img src={remove} width="45" height="55" className="" alt="img" />
           </a>
+          <Link to="/">
           <a className="a red" >
             FAST SHOPPING
-          </a>
+          </a></Link>
           <button
             className="button navbar-toggler "
             type="button"
@@ -29,7 +31,7 @@ export default class Header extends Component {
             </span>
           </button>
           <div className="collapse navbar-collapse a float-right" id="navbarNavDropdown">
-            <ul className="navbar-nav ">
+            {/* <ul className="navbar-nav ">
               <li className="nav-item">
                 <a className="a" >
                   Sign In
@@ -45,7 +47,7 @@ export default class Header extends Component {
                   Cart
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </nav>
       </>

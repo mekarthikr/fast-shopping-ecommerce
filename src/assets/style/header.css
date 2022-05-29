@@ -5,10 +5,12 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
+    text-decoration: none;
   }
   .a:hover{
     color: white;
     text-decoration: none;
+    /* text-decoration: none; */
   }
   nav
 {
@@ -44,4 +46,7 @@
 .button:focus
 {
   box-shadow: none !important;
+}
+a{
+  text-decoration: none;
 }

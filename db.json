@@ -34,6 +34,13 @@
       "email": "karthikr",
       "password": "karthikr",
       "id": 5
+    },
+    {
+      "firstname": "ss",
+      "lastname": "ss",
+      "email": "ss",
+      "password": "ss",
+      "id": 6
     }
   ],
   "products": [
@@ -82,10 +89,10 @@
   ],
   "admin": [
     {
-      "firstname": "Jamison",
+      "firstname": "admin",
       "lastname": "Schimmel",
-      "email": "Natalia_Murray81@gmail.com",
-      "password": "GB5vwteYaiVPGDh",
+      "email": "admin",
+      "password": "admin",
       "id": 1
     }
   ]

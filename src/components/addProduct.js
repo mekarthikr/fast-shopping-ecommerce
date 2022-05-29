@@ -35,7 +35,7 @@ export default function AddProduct()
         <div className='edit-product-block bg-blue'>
           <h1 className='color-white' >Add Product</h1>
           <p className='color-white'>Enter the details of the product</p>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} autocomplete="off">
             <div className='row' >
             <div className="col">
               <div className="form-group row">

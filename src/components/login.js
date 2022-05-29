@@ -48,7 +48,7 @@ export function Login()
         <div className="login-block">
           <h1> Welcome back! </h1>
           <p>Please sign in below to continue</p>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} autocomplete="off">
             <div className="form-group">
               <label>EMAIL ADDERSS</label>
               <input className="form-control form-input" type={"text"}  name="email" onChange={handleInputChange} />

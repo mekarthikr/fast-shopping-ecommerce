@@ -58,7 +58,7 @@ export default function Prototype
         <div className='edit-product-block bg-blue'>
           <h1 className='color-white' >Edit Product</h1>
           <p className='color-white'>Enter the modification for the product</p>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} autocomplete="off">
             <div className='row' >
             <div className="col">
               <div className="form-group row">

@@ -48,7 +48,7 @@ export function Admin()
         <div className="admin-block">
           <h1> Welcome Admin </h1>
           <p>Please login to continue</p>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} autocomplete="off">
             <div className="form-group">
               <label className="admin-label">EMAIL ADDERSS</label>
               <input className="form-control admin-form-input" type={"text"}  name="email" onChange={handleInputChange} />
