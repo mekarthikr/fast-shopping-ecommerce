@@ -67,6 +67,13 @@ const usersReducers = (state = initialState, action) => {
           
       //   };
         case types.ADD_TO_CART:
+          // console.log("quan",action.payload.quantity)
+          if(!action.payload.quantity)
+          {
+            console.log("false")
+          }
+          console.log("action payload",action.payload)
+          console.log("...state",...state.value)
           const val=[...state.value,action.payload]
           return{
             ...state,

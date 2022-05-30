@@ -1,0 +1,13 @@
+.summary
+{
+    padding: 5%;
+    margin: 0 0 0 0;
+}
+.summary h3{
+    font-size: 28px;
+    font-weight: 500;
+}
+.summary-section
+{
+    margin-top: 15px;
+}

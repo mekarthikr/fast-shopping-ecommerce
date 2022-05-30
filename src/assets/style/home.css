@@ -15,7 +15,7 @@
 
 .bg-white
 {
-  color: rgb(239, 224, 202);
+  background-color: rgb(239, 224, 202) !important; 
 }
 
 .color-red{
