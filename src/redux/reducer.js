@@ -6,7 +6,7 @@ const initialState = {
   product: {},
   loading: true,
   cart:[],
-  value:"true"
+  value:[]
 };
 
 const usersReducers = (state = initialState, action) => {
@@ -51,15 +51,35 @@ const usersReducers = (state = initialState, action) => {
         product: action.payload,
         loading: false,
       };
-      case types.ADD_TO_CART:
-        return {
-          // ...state,
-          // product: action.payload,
-          // loading: false,
-          //           ...state,
-          // cart: initialState.cart,
-          // loading: false,
-        };
+      // case types.ADD_TO_CART:
+      //   const newCart=[...state,action.payload]
+
+      //   return {
+      //     // ...state,
+      //     // product: action.payload,
+      //     // loading: false,
+      //     //           ...state,
+      //     // cart: initialState.cart,
+      //     // loading: false,
+      //     ...state.cart,
+      //     cart:newCart,
+      //     loading: false,
+          
+      //   };
+        case types.ADD_TO_CART:
+          const val=[...state.value,action.payload]
+          return{
+            ...state,
+            value:val
+          }
+          case types.REMOVE_FROM_CART:
+            const newbasket=[...state.value];
+            const index=state.value.findIndex((item)=>item.id===action.payload)
+            newbasket.splice(index,1)
+            return{
+              ...state,
+              value:newbasket,
+            }
     default:
       return state;
   }

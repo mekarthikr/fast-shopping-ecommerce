@@ -50,6 +50,7 @@ const getProduct = (product) => ({
 //   payload: product,
 // })
 
+
 export const loadUsers = () => {
   return function (dispatch) {
     axios
@@ -174,17 +175,67 @@ export const updateProduct = (product, id) => {
   };
 };
 
-// export const addToCart = (product) => {
-//   return function (dispatch) {
-//     // axios
-//     //   .put(`${API_PRODUCTS}/${id}`, product)
-//     //   .then((resp) => {
-//     //     console.log("resp", resp);
-//     //     dispatch(productUpdated());
-//     //   })
-//     //   .catch((error) => console.log(error));
-//     // dispatch(addCart(product))
-//     // console.log(product)
-//   };
-// };
+export const addToCart = (item) => (
+  console.log(item)
+//   {
+//   type:types.ADD_TO_CART,
+//   payload:item
+//   // return function (dispatch) {
+//   //   // axios
+//   //   //   .put(`${API_PRODUCTS}/${id}`, product)
+//   //   //   .then((resp) => {
+//   //   //     console.log("resp", resp);
+//   //   //     dispatch(productUpdated());
+//   //   //   })
+//   //   //   .catch((error) => console.log(error));
+//   //   // dispatch(addCart(product))
+//   //   // console.log(product)
+//   // };
+// }
+);
 
+export const addProductToCart = (value) => (
+  // console.log(value)
+  {
+    type:types.ADD_TO_CART,
+    payload:value
+  }
+//   {
+//   type:types.ADD_TO_CART,
+//   payload:item
+//   // return function (dispatch) {
+//   //   // axios
+//   //   //   .put(`${API_PRODUCTS}/${id}`, product)
+//   //   //   .then((resp) => {
+//   //   //     console.log("resp", resp);
+//   //   //     dispatch(productUpdated());
+//   //   //   })
+//   //   //   .catch((error) => console.log(error));
+//   //   // dispatch(addCart(product))
+//   //   // console.log(product)
+//   // };
+// }
+);
+
+export const removeProductFromCart = (id) => (
+  // console.log(value)
+  {
+    type:types.REMOVE_FROM_CART,
+    payload:id
+  }
+//   {
+//   type:types.ADD_TO_CART,
+//   payload:item
+//   // return function (dispatch) {
+//   //   // axios
+//   //   //   .put(`${API_PRODUCTS}/${id}`, product)
+//   //   //   .then((resp) => {
+//   //   //     console.log("resp", resp);
+//   //   //     dispatch(productUpdated());
+//   //   //   })
+//   //   //   .catch((error) => console.log(error));
+//   //   // dispatch(addCart(product))
+//   //   // console.log(product)
+//   // };
+// }
+);

@@ -17,6 +17,7 @@ export default function Viewproduct() {
     price: "",
   });
   const { product } = useSelector((state) => state.data);
+  console.log("product",product)
   let dispatch = useDispatch();
   // const { productname, image,color,price } = state;
   useEffect(() => {

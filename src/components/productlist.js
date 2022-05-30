@@ -63,6 +63,7 @@ export default function PersonList() {
           <Productcard key={products.id} details={products} />
         ))}
       </div>
+      <button onClick={()=>navigate('/cart')}>button</button>
     </div>
   );
 }

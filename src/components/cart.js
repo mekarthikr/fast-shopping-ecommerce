@@ -1,58 +1,42 @@
-// import '../assets/style/register.css'
-// import { useState } from "react";
-// import { useDispatch } from "react-redux";
-// import { useParams } from 'react-router-dom';
-// import { useSelector } from "react-redux";
-// import React, { useEffect } from "react";
-// import { getSingleProduct,addToCart } from "../redux/actions";
-// import "../assets/style/viewproduct.css"
+import '../assets/style/register.css'
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useParams } from 'react-router-dom';
+import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { getSingleProduct,addToCart } from "../redux/actions";
+import "../assets/style/cart.css"
+import Cartproduct from './cartproduct';
+// Cartproduct
 
 
-// export default function Cart()
-// {
-//     const {id}=useParams()
-//     console.log("id",id)
-//     const [state, setState] = useState({
-//         productname: "",
-//         image: "",
-//         color: "",
-//         price: ""
-  
-//       });
-//       const { product } = useSelector((state) => state.data);
-//     let dispatch = useDispatch();
-//     const { productname, image,color,price } = state;
-//     useEffect(() => {
-//       dispatch(getSingleProduct(id));
-//     }, []);
-//     useEffect(() => {
-//       if (product) {
-//         setState({ ...product });
-//       }
-//     }, []);
-//     // console.log(state)
-//     // console.log(product)
-//     dispatch(addToCart(state))
-//     return(
-//         <>
-//        <div className='container main-view-product'>
-//        {/* <img className="" width={200} height={200} src={state.image} />
-//        <h3>{state.productname}</h3>
-//        <h3>{state.color}</h3>
-//        <h3>{state.price}</h3> */}
-//        <div className='row'>
-//          <div className='col'>
-//          <img className="" width={680} height={680} src={state.image} />
-//          </div>  
-//          <div className='col main-detail-product'>
-//          <h1>{state.productname}</h1>
-//         <h2>{state.color}</h2>
-//         <p>{state.price}</p>
-//         <button className='color-white bg-blue' >ADD</button>
-//            </div>     
-//        </div>
+export default function Cart()
+{
+    const { value } = useSelector((state) => state.data);
+    console.log("value", value);
+    return(
+        // <h1>Your Cart</h1>
+        <>
+        <div className='cart-container'>
+            <h1>Your Cart</h1>
+            <p>1 item ships at checkout</p>
+            <div className='cart-main'>
+            <div className='row'>
+                <div className='col-md-7'>
+                <hr/>                    
+                <>
 
-//        </div>
-//         </>
-//     )
-// }
+                {value.map((value) => (
+          <Cartproduct key={value.id} details={value} />
+        ))}</>
+                </div>
+                <div className='col-md-5'>
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+        </>
+    )
+
+}
