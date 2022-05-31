@@ -35,7 +35,7 @@ export default function Cart() {
               </>
             </div>
             <div className="col-md-5 summary-section">
-              <Cartsummary />
+            {value.length!==0 &&<Cartsummary />}              
             </div>
           </div>
         </div>

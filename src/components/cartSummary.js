@@ -20,7 +20,13 @@ export default function Cartsummary() {
       <div className="summary bg-white">
         <div>
           <h3>Summary</h3>
+          {value.map((value) => (
+                  // <Cartproduct key={value.id} details={value} />
+                  <h4> {value.productname} </h4>
+                ))}
+                <hr/>
           <p>Total price is {getTotal(value)}</p>
+
         </div>
       </div>
     </>
