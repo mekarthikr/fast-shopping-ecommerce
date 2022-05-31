@@ -4,8 +4,7 @@ import { useDispatch } from "react-redux";
 import { addProduct } from "../redux/actions";
 import { useNavigate } from "react-router-dom";
 
-export default function AddProduct() 
-{
+export default function AddProduct() {
   const [state, setState] = useState({
     productname: "",
     image: "",
@@ -32,41 +31,68 @@ export default function AddProduct()
 
   return (
     <>
-        <div className='edit-product-block bg-blue'>
-          <h1 className='color-white' >Add Product</h1>
-          <p className='color-white'>Enter the details of the product</p>
-          <form onSubmit={handleSubmit} autocomplete="off">
-            <div className='row' >
+      <div className="edit-product-block bg-blue">
+        <h1 className="color-white">Add Product</h1>
+        <p className="color-white">Enter the details of the product</p>
+        <form onSubmit={handleSubmit} autocomplete="off">
+          <div className="row">
             <div className="col">
               <div className="form-group row">
-                <label className='color-white' >PRODUCT NAME</label>
-                <input className='form-control form-input' type={"text"} name="productname" value={productname||""} onChange={handleInputChange} />
+                <label className="color-white">PRODUCT NAME</label>
+                <input
+                  className="form-control form-input"
+                  type={"text"}
+                  name="productname"
+                  value={productname || ""}
+                  onChange={handleInputChange}
+                />
               </div>
               <div className="form-group row">
-                <label className='color-white'>IMAGE URL</label>
-                <input className='form-control form-input' type={"text"} name="image" value={image||""} onChange={handleInputChange} />
+                <label className="color-white">IMAGE URL</label>
+                <input
+                  className="form-control form-input"
+                  type={"text"}
+                  name="image"
+                  value={image || ""}
+                  onChange={handleInputChange}
+                />
               </div>
               <div className="form-group row">
-              <label className='color-white'>PRODUCT COLOR</label>
-              <input className='form-control form-input' type={"text"} name="color" value={color||""} onChange={handleInputChange} />
+                <label className="color-white">PRODUCT COLOR</label>
+                <input
+                  className="form-control form-input"
+                  type={"text"}
+                  name="color"
+                  value={color || ""}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="form-group row">
+                <label className="color-white">PRICE</label>
+                <input
+                  className="form-control form-input"
+                  type={"text"}
+                  name="price"
+                  value={price || ""}
+                  onChange={handleInputChange}
+                />
+              </div>
             </div>
-            <div className="form-group row" >
-              <label className='color-white'>PRICE</label>
-              <input className='form-control form-input' type={"text"} name="price" value={price||""} onChange={handleInputChange} />
-            </div>
-            </div>
-            <div className='col edit-product-view'>
-              <div className='bg-blue edit-product-card'>
-                <img alt="product" src={image}/>
-                <h3 className='color-white'>{productname}</h3>
-                <p className='color-white'>{color}</p>
-                <p className='color-white'>{price}</p>
+            <div className="col edit-product-view">
+              <div className="bg-blue edit-product-card">
+                <img alt="product" src={image} />
+                <h3 className="color-white">{productname}</h3>
+                <p className="color-white">{color}</p>
+                <p className="color-white">{price}</p>
               </div>
             </div>
           </div>
-            <button type='submit' className='login-button'> UPDATE </button>
-          </form>
-        </div>
+          <button type="submit" className="login-button">
+            {" "}
+            UPDATE{" "}
+          </button>
+        </form>
+      </div>
     </>
   );
-} 
+}

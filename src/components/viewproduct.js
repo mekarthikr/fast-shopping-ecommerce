@@ -17,15 +17,11 @@ export default function Viewproduct() {
     price: "",
   });
   const { product } = useSelector((state) => state.data);
-  console.log("product",product)
+  console.log("product", product);
   let dispatch = useDispatch();
-  // const { productname, image,color,price } = state;
   useEffect(() => {
-    // function dispatchProduct() {
-      dispatch(getSingleProduct(id));
-    // }
-    // dispatchProduct();
-  }, []);// eslint-disable-line react-hooks/exhaustive-deps
+    dispatch(getSingleProduct(id));
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (product) {
       setState({ ...product });
@@ -35,10 +31,6 @@ export default function Viewproduct() {
   return (
     <>
       <div className="container main-view-product">
-        {/* <img className="" width={200} height={200} src={state.image} />
-       <h3>{state.productname}</h3>
-       <h3>{state.color}</h3>
-       <h3>{state.price}</h3> */}
         <div className="row">
           <div className="col">
             <img

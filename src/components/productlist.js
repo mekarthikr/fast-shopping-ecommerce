@@ -35,13 +35,13 @@ export default function PersonList() {
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSingleUser(id));
-  }, []);// eslint-disable-line react-hooks/exhaustive-deps
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (user) {
       setState({ ...user });
     }
-  }, [user]);// eslint-disable-line react-hooks/exhaustive-deps
+  }, [user]); // eslint-disable-line react-hooks/exhaustive-deps
   console.log(state);
   const editHandle = (e) => {
     e.preventDefault();
@@ -63,7 +63,7 @@ export default function PersonList() {
           <Productcard key={products.id} details={products} />
         ))}
       </div>
-      <button onClick={()=>navigate('/cart')}>button</button>
+      <button onClick={() => navigate("/cart")}>button</button>
     </div>
   );
 }

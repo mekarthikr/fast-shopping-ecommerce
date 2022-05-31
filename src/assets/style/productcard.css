@@ -12,7 +12,6 @@
 {
     width: 18rem;
     margin: 0.76%;
-    /* border:0px; */
     border-radius: 3%;
     background-color: rgb(255, 255, 255);;
 }
@@ -38,7 +37,6 @@
     margin: 1%;
     text-align: left;
     font-size: 20px;
-    /* font-weight: lighter; */
 }
 .product-card p
 {
@@ -56,11 +54,8 @@ color: aliceblue;
 font-size: 15px;
 }
 .card-image{
-    /* border: 2px solid black; */
     width: 80%;  
-    /* height:80%;    */
     margin: 5% 10%;
-    /* padding: 0 10%;  */
 }
 .float-right{
     float: right;
@@ -71,10 +66,7 @@ font-size: 15px;
 }
 .card-body 
 {
-    /* font-size: 20px;
-    font-weight: 600; */
     background-color: rgb(239, 224, 202);
-    /* border-radius: 5px; */
     height: 100%;
 }
 /* .card:hover{
@@ -92,16 +84,8 @@ font-size: 15px;
 }
 .card-body a
 {
-    /* font-size: 16px;
-    font-weight: 400; */
     color: white;
 }
-/* .btn{
-    text-decoration: none;
-} */
-/* .btn:hover{
-    color:#9C2A2A;
-} */
 
 .btn{
     border-radius: 0%;

@@ -17,7 +17,6 @@
     border: 0;
     border-radius: 3px;
     background-color: rgb(239, 224, 202);
-    /* height: 40%; */
 }
 .single-product img
 {
@@ -28,16 +27,11 @@
 {
     margin-left: 15px;
 }
-/* .single-product div
-{
-    background-color: aqua;
-} */
 .product-list{
 
 }
 .product{
     padding: 0px;
-    /* border: 0; */
     margin-top: 1rem;
     border: 0;
 }

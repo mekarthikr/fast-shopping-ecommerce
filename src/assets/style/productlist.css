@@ -9,7 +9,6 @@
     display: inline;
     font-weight: 700;
     font-size: 45px;
-    /* border: 1px solid black; */
 }
 .profile-details button{
     float: right;
@@ -19,6 +18,3 @@
     font-weight: 700;
     width: 150px;
 }
-/* .profile{
-    margin: 0 5%;
-} */

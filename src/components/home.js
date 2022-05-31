@@ -1,6 +1,6 @@
 import { Component } from "react";
-import image_1 from '../assets/image/img.png';
-import "../assets/style/home.css"
+import image_1 from "../assets/image/img.png";
+import "../assets/style/home.css";
 import { Link } from "react-router-dom";
 
 export default class Home extends Component {
@@ -10,27 +10,43 @@ export default class Home extends Component {
         <div>
           <div className="row mar blue">
             <div className="col-md pad red head p-l-50">
-              <h1 className="font-70">Find it.Love it.<br />Buy it.</h1>
-              <p className="font-p">Life is hard enough already. Let us make it a little easier.</p>
-              <Link to={'/login'}><button className="home-button" >Get Started</button></Link>             
+              <h1 className="font-70">
+                Find it.Love it.
+                <br />
+                Buy it.
+              </h1>
+              <p className="font-p">
+                Life is hard enough already. Let us make it a little easier.
+              </p>
+              <Link to={"/login"}>
+                <button className="home-button">Get Started</button>
+              </Link>
             </div>
             <div className="col-md m-l padding-0">
               <span className="">
                 <div className="">
-                  <img className="image" width={480} height={520} src={image_1} alt="hello" />
+                  <img
+                    className="image"
+                    width={480}
+                    height={520}
+                    src={image_1}
+                    alt="hello"
+                  />
                 </div>
               </span>
             </div>
           </div>
-          <div>
-          </div>
+          <div></div>
         </div>
-        <div className="p" >
+        <div className="p">
           <div className="row mar product">
             <div className="col-md home-product-card">
               <span>
                 <a>
-                  <img className="product-img" src="https://m.media-amazon.com/images/I/718ETwvLVOL._SY450_.jpg" />
+                  <img
+                    className="product-img"
+                    src="https://m.media-amazon.com/images/I/718ETwvLVOL._SY450_.jpg"
+                  />
                 </a>
               </span>
               <span>
@@ -42,7 +58,10 @@ export default class Home extends Component {
             <div className="col-md home-product-card">
               <span>
                 <a>
-                  <img className="product-img" src="https://m.media-amazon.com/images/I/61rDecG7fdL._AC_SS450_.jpg" />
+                  <img
+                    className="product-img"
+                    src="https://m.media-amazon.com/images/I/61rDecG7fdL._AC_SS450_.jpg"
+                  />
                 </a>
               </span>
               <span>
@@ -54,7 +73,10 @@ export default class Home extends Component {
             <div className="col-md home-product-card">
               <span>
                 <a>
-                  <img className="product-img" src="https://m.media-amazon.com/images/I/61WFNqf8hVL._SX522_.jpg" />
+                  <img
+                    className="product-img"
+                    src="https://m.media-amazon.com/images/I/61WFNqf8hVL._SX522_.jpg"
+                  />
                 </a>
               </span>
               <span>
@@ -66,7 +88,10 @@ export default class Home extends Component {
             <div className="col-md home-product-card">
               <span>
                 <a>
-                  <img className="product-img" src="https://m.media-amazon.com/images/I/81dkcPFfZ1L._SX679_.jpg" />
+                  <img
+                    className="product-img"
+                    src="https://m.media-amazon.com/images/I/81dkcPFfZ1L._SX679_.jpg"
+                  />
                 </a>
               </span>
               <span>
@@ -76,13 +101,16 @@ export default class Home extends Component {
               </span>
             </div>
           </div>
-          <div >
+          <div>
             <h2 className="title">JOIN OUR CLUB OF ONE MILLION CUSTOMER</h2>
           </div>
           <div>
-            <img className="banner" src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/Wireless/Apple/iPhone11Pro/Pre-book/D12731792_IN_WLM_Apple_PC_LP_top_banner._CB452057853_.jpg" />
+            <img
+              className="banner"
+              src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/Wireless/Apple/iPhone11Pro/Pre-book/D12731792_IN_WLM_Apple_PC_LP_top_banner._CB452057853_.jpg"
+            />
           </div>
-          <div >
+          <div>
             <h2 className="title">WHY USE OUR SITE?</h2>
           </div>
         </div>
@@ -92,26 +120,43 @@ export default class Home extends Component {
               <div className="detail-cont">
                 <h3>FAST DELIVERY</h3>
                 <ul>
-                  <li>We garenter you that our products are delivered fast and securely.</li>
-                  <li>Nullam ligula metus, consequat placerat nisi ac, auctor viverra elit.</li>
+                  <li>
+                    We garenter you that our products are delivered fast and
+                    securely.
+                  </li>
+                  <li>
+                    Nullam ligula metus, consequat placerat nisi ac, auctor
+                    viverra elit.
+                  </li>
                   <li>Etiam volutpat id nunc at tincidunt.</li>
                 </ul>
               </div>
             </div>
             <div className="col-md">
-              <img className="detail-img" src="https://www.philipkingsley.co.uk/media/LandingPages/Homepage/Free_Delivery.jpg" />
+              <img
+                className="detail-img"
+                src="https://www.philipkingsley.co.uk/media/LandingPages/Homepage/Free_Delivery.jpg"
+              />
             </div>
           </div>
           <div className="row mar">
             <div className="col-md">
-              <img className="detail-img" src="http://www.techtalk.gfi.com/wp-content/uploads/2014/12/30-things-to-do-to-secure-your-network-now_SQ.jpg" />
+              <img
+                className="detail-img"
+                src="http://www.techtalk.gfi.com/wp-content/uploads/2014/12/30-things-to-do-to-secure-your-network-now_SQ.jpg"
+              />
             </div>
             <div className="col-md">
               <div className="detail-cont">
                 <h3>USER PRIVACY</h3>
                 <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                  <li>Nullam ligula metus, consequat placerat nisi ac, auctor viverra elit.</li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </li>
+                  <li>
+                    Nullam ligula metus, consequat placerat nisi ac, auctor
+                    viverra elit.
+                  </li>
                   <li>Etiam volutpat id nunc at tincidunt.</li>
                 </ul>
               </div>
@@ -122,21 +167,29 @@ export default class Home extends Component {
               <div className="detail-cont">
                 <h3>SECURE PAYMENT</h3>
                 <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                  <li>Nullam ligula metus, consequat placerat nisi ac, auctor viverra elit.</li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </li>
+                  <li>
+                    Nullam ligula metus, consequat placerat nisi ac, auctor
+                    viverra elit.
+                  </li>
                   <li>Etiam volutpat id nunc at tincidunt.</li>
                 </ul>
               </div>
             </div>
             <div className="col-md">
-              <img className="detail-img" src="https://sa.visamiddleeast.com/dam/VCOM/global/run-your-business/images/visa-direct-overview-hero-640x640.jpg" />
+              <img
+                className="detail-img"
+                src="https://sa.visamiddleeast.com/dam/VCOM/global/run-your-business/images/visa-direct-overview-hero-640x640.jpg"
+              />
             </div>
           </div>
         </div>
-        <div >
+        <div>
           <h2 className="title">GET STARTED WITH US</h2>
         </div>
       </>
-    )
+    );
   }
 }
