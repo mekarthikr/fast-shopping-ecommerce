@@ -6,7 +6,8 @@ const initialState = {
   product: {},
   loading: true,
   cart:[],
-  value:[]
+  value:[],
+  valid:true
 };
 
 const usersReducers = (state = initialState, action) => {
@@ -67,11 +68,11 @@ const usersReducers = (state = initialState, action) => {
           
       //   };
         case types.ADD_TO_CART:
-          // console.log("quan",action.payload.quantity)
-          // if(!action.payload.quantity)
-          // {
-          //   action.payload.quantity=1;
-          // }
+          console.log("quan",action.payload.quantity)
+          if(!action.payload.quantity)
+          {
+            action.payload.quantity=1;
+          }
           // else
           // {
           //   action.payload.quantity=+1;

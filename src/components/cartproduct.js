@@ -15,6 +15,14 @@ export default function Cartproduct(props) {
   const removeFromCart = () => {
     dispatch(removeProductFromCart(props.details.id));
   };
+
+  const increacequant = () => {
+    dispatch(removeProductFromCart(props.details.id));
+  };
+
+  const decreacequant = () => {
+    dispatch(removeProductFromCart(props.details.id));
+  };
   return (
     <div className="cart-card">
       <div className="row">
@@ -26,6 +34,9 @@ export default function Cartproduct(props) {
           <img onClick={removeFromCart} src={close} className="" alt="img" />
           <p>{props.details.color}</p>
           <h6 className="float-right inline">{props.details.price}</h6>
+          <p>{props.details.quantity}</p>
+          <button onClick={increacequant}>add</button>
+          <button onClick={decreacequant}>add</button>
         </div>
       </div>
       <hr />

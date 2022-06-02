@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import React, { useEffect } from "react";
-import { getSingleProduct } from "../redux/actions";
+import { addProductToCart, getSingleProduct } from "../redux/actions";
 import "../assets/style/viewproduct.css";
 
 export default function Viewproduct() {
@@ -28,6 +28,12 @@ export default function Viewproduct() {
     }
   }, [product]);
   console.log(state);
+  const addToCart = (e) => {
+    console.log(e);
+    e.preventDefault();
+    console.log("called");
+    dispatch(addProductToCart(product));
+  };
   return (
     <>
       <div className="container main-view-product">
@@ -45,7 +51,7 @@ export default function Viewproduct() {
             <h1>{state.productname}</h1>
             <h2>{state.color}</h2>
             <p>{state.price}</p>
-            <button className="color-white bg-blue">ADD</button>
+            <button className="color-white bg-blue" onClick={addToCart}>ADD</button>
           </div>
         </div>
       </div>

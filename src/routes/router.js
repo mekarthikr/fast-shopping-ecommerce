@@ -26,10 +26,10 @@ export function Router() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/adminpanel" element={<Adminpanel />} />
         <Route path="/editproduct/:id" element={<Editproduct />} />
-        <Route path="/prototype" element={<Prototype />} />
+        {/* <Route path="/prototype" element={<Prototype />} /> */}
         <Route path="/addProduct" element={<AddProduct />} />
         <Route path="/product/:id" element={<Viewproduct />} />
-        <Route path="/cart/" element={<Cart />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );

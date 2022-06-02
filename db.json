@@ -41,6 +41,13 @@
       "email": "ss",
       "password": "ss",
       "id": 6
+    },
+    {
+      "firstname": "Karthik",
+      "lastname": "R",
+      "email": "iamjustkarthik@gmail.com",
+      "password": "Karthikreg",
+      "id": 7
     }
   ],
   "products": [

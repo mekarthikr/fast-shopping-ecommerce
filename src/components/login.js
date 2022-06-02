@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { API } from "../api/api";
 import { useNavigate, Link } from "react-router-dom";
 import "../assets/style/login.css";
-import UpdatedComponent from "../validation/login";
+import  { ValidateLogin } from "../validation/register";
 
 function Login() {
   let navigate = useNavigate();
@@ -11,6 +11,7 @@ function Login() {
     email: "",
     password: "",
   });
+  const [error, setError] = useState("");
 
   const { email, password } = state;
 
@@ -30,27 +31,36 @@ function Login() {
     setState({ ...state, [name]: value });
   };
 
+  // useEffect([error])
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // let profile = user.find(
-    //   (index) => index.email === email && index.password === password
-    // );
-    // if (profile !== undefined) {
-    //   localStorage.setItem("id", profile.id);
-      navigate("/product"
-      // , { profile }
-      );
-    //   console.log("true");
-    // } else {
-    //   console.log("false");
-    // }
+    // setError("hello")
+    // console.log(error)
+    // ValidateLogin(state);
+    // setError({Error:"Error"})
+    // console.log("Error",Error)
+    let profile = user.find(
+      (index) => index.email === email && index.password === password
+    );
+    if (profile !== undefined) {
+      localStorage.setItem("id", profile.id);
+      setError("")
+      navigate("/product", { profile });
+      console.log("true");
+    } else {
+      // console.log("false");
+      // setError("false")
+      setError("Invalid Login Credentials")
+    }
   };
   return (
     <>
       <div className="login-block">
         <h1> Welcome back! </h1>
-        <p>Please sign in below to continue</p>
-        <form onSubmit={handleSubmit} autocomplete="off">
+        <p className="color-blue" >Please sign in below to continue</p>
+        <p className="color-red" >{error}</p>
+        <form onSubmit={handleSubmit} autoComplete="off">
           <div className="form-group">
             <label>EMAIL ADDERSS</label>
             <input
@@ -70,20 +80,20 @@ function Login() {
             />
           </div>
           <button type="submit" className="login-button">
-            {" "}
-            SIGN IN{" "}
+            {""}
+            SIGN IN{""}
           </button>
         </form>
 
-        <p className="line">
+        <p className="line color-blue">
           <span>or</span>
         </p>
         <Link to={"/register"}>
-          <button className="login-button"> SIGN UP </button>
+          <button className="login-button">SIGN UP</button>
         </Link>
       </div>
     </>
   );
 }
 
-export default UpdatedComponent(Login)
+export default Login;
