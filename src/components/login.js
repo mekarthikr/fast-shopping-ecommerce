@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import { API } from "../api/api";
 import { useNavigate, Link } from "react-router-dom";
 import "../assets/style/login.css";
+import UpdatedComponent from "../validation/login";
 
-export function Login() {
+function Login() {
   let navigate = useNavigate();
   const [state, setState] = useState({
     email: "",
@@ -31,16 +32,18 @@ export function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let profile = user.find(
-      (index) => index.email === email && index.password === password
-    );
-    if (profile !== undefined) {
-      localStorage.setItem("id", profile.id);
-      navigate("/product", { profile });
-      console.log("true");
-    } else {
-      console.log("false");
-    }
+    // let profile = user.find(
+    //   (index) => index.email === email && index.password === password
+    // );
+    // if (profile !== undefined) {
+    //   localStorage.setItem("id", profile.id);
+      navigate("/product"
+      // , { profile }
+      );
+    //   console.log("true");
+    // } else {
+    //   console.log("false");
+    // }
   };
   return (
     <>
@@ -82,3 +85,5 @@ export function Login() {
     </>
   );
 }
+
+export default UpdatedComponent(Login)
