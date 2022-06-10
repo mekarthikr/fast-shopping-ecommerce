@@ -8,7 +8,7 @@ import Edituser from "../components/editUser";
 import { Admin } from "../components/admin";
 import Adminpanel from "../components/adminPanel";
 import Editproduct from "../components/editproduct";
-import Prototype from "../components/prototype";
+// import Prototype from "../components/prototype";
 import AddProduct from "../components/addProduct";
 import Viewproduct from "../components/viewproduct";
 import Cart from "../components/cart";

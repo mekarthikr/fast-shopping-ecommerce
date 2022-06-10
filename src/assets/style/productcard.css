@@ -10,10 +10,12 @@
 }
 .cardwidth
 {
-    width: 18rem;
-    margin: 0.76%;
+    /* width: 15rem; */
+    width: 25%;
+    /* margin: 0.76%; */
     border-radius: 3%;
-    background-color: rgb(255, 255, 255);;
+    background-color: rgb(255, 255, 255);
+    border: 0px;
 }
 .cardwidth:hover
 {
@@ -68,6 +70,8 @@ font-size: 15px;
 {
     background-color: rgb(239, 224, 202);
     height: 100%;
+    border-radius: 5px;
+    position: relative;
 }
 /* .card:hover{
     border: 2px solid black;
@@ -88,5 +92,11 @@ font-size: 15px;
 }
 
 .btn{
-    border-radius: 0%;
+    border-radius: 5px;
+    margin: 15px;
+}
+.bottom-btn
+{
+    position: absolute;
+    bottom: 0px;
 }

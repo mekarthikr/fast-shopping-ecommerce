@@ -39,7 +39,7 @@ export default class Home extends Component {
           <div></div>
         </div>
         <div className="p">
-          <div className="row mar product">
+          <div className="row mar product-home">
             <div className="col-md home-product-card">
               <span>
                 <a>
