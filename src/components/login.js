@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { API } from "../api/api";
 import { useNavigate, Link } from "react-router-dom";
 import "../assets/style/login.css";
-import  { ValidateLogin } from "../validation/register";
+// import  { ValidateLogin } from "../validation/register";
 
 function Login() {
   let navigate = useNavigate();
@@ -46,8 +46,9 @@ function Login() {
     if (profile !== undefined) {
       localStorage.setItem("id", profile.id);
       setError("")
+      //useDispa
       navigate("/product", { profile });
-      console.log("true");
+      // console.log("true");
     } else {
       // console.log("false");
       // setError("false")

@@ -7,7 +7,7 @@ const initialState = {
   loading: true,
   cart:[],
   value:[],
-  valid:true
+  isLogin:false
 };
 
 const usersReducers = (state = initialState, action) => {

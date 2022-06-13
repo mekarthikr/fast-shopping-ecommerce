@@ -45,11 +45,6 @@ const getProduct = (product) => ({
   type: types.GET_SINGLE_PRODUCT,
   payload: product,
 });
-// const addCart = (product)=>({
-//   type: types.ADD_TO_CART,
-//   payload: product,
-// })
-
 
 export const loadUsers = () => {
   return function (dispatch) {
@@ -205,5 +200,12 @@ export const removeProductFromCart = (id) => (
   {
     type:types.REMOVE_FROM_CART,
     payload:id
+  }
+);
+
+export const userLoggedIn = () => (
+  {
+    type:types.USER_LOGGED_IN,
+    payload:true
   }
 );

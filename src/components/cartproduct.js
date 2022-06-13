@@ -27,7 +27,7 @@ export default function Cartproduct(props) {
     <div className="cart-card">
       <div className="row">
         <div className="col-md-4">
-          <img src={props.details.image} className="" alt="product" />
+          <img src={props.details.image} alt="product" />
         </div>
         <div className="col-md-8 cart-product-details">
           <h2 className="inline">{props.details.productname}</h2>

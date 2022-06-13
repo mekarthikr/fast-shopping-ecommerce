@@ -11,6 +11,8 @@ import Editproduct from "../components/editproduct";
 import AddProduct from "../components/addProduct";
 import Viewproduct from "../components/viewproduct";
 import Cart from "../components/cart";
+import UserProfile from "../components/userProfile";
+
 
 export function Router() {
 
@@ -31,6 +33,7 @@ export function Router() {
         <Route path="/addProduct" element={<AddProduct />} />
         <Route path="/product/:id" element={<Viewproduct />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/profile" element={<UserProfile />} />
       </Routes>
     </BrowserRouter>
   );

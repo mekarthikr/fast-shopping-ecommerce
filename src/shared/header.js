@@ -37,13 +37,17 @@ export default class Header extends Component {
             <ul className="navbar-nav ">
               <li className="nav-item">
                 <a className="a" >
+                <Link to="/profile">
                   <img src={user} className="icon" width={"35px"} alt="img" />
                   {/* <p >Profile</p> */}
+                  </Link>
                 </a>
               </li>
               <li className="nav-item">
                 <a className="a" >
+                <Link to="/cart">
                   <img src={cart} className="icon" width={"35px"} alt="img" />
+                  </Link>
                 </a>
               </li>
               <li className="nav-item">

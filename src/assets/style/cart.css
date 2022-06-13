@@ -16,7 +16,7 @@
 }
 
 .cart-card img {
-    width: 230px;
+    width: 100%;
 }
 
 .cart-card h2 {
@@ -41,4 +41,7 @@
 .cart-product-details img{
     width: 20px;
     float: right;
+}
+.cart-img{
+    width: 100%;
 }
