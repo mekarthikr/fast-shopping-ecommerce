@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../components/home";
-import Login from "../components/login";
-import Register from "../components/register";
+import Home from "../components/home/home";
+import Login from "../components/home/login";
+import Register from "../components/home/register";
 import Header from "../shared/header";
-import Productlist from "../components/productlist";
-import Edituser from "../components/editUser";
-import { Admin } from "../components/admin";
-import Adminpanel from "../components/adminPanel";
-import Editproduct from "../components/editproduct";
-import AddProduct from "../components/addProduct";
-import Viewproduct from "../components/viewproduct";
-import Cart from "../components/cart";
-import UserProfile from "../components/userProfile";
+import Productlist from "../components/product/productlist";
+import Edituser from "../components/user/editUser";
+import { Admin } from "../components/admin/admin";
+import Adminpanel from "../components/admin/adminPanel";
+import Editproduct from "../components/admin/editproduct";
+import AddProduct from "../components/admin/addProduct";
+import Viewproduct from "../components/product/viewproduct";
+import Cart from "../components/cart/cart";
+import UserProfile from "../components/user/userProfile";
 
 
 export function Router() {

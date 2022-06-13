@@ -1,8 +1,8 @@
-import "../assets/style/register.css";
+import "../../assets/style/register.css";
 import { useSelector } from "react-redux";
 import React from "react";
-import "../assets/style/cart.css";
-import "../assets/style/cartsummary.css";
+import "../../assets/style/cart.css";
+import "../../assets/style/cartsummary.css";
 
 export default function Cartsummary() {
   const { value } = useSelector((state) => state.data);

@@ -1,7 +1,7 @@
-import "../assets/style/register.css";
+import "../../assets/style/register.css";
 import { useSelector } from "react-redux";
 import React from "react";
-import "../assets/style/cart.css";
+import "../../assets/style/cart.css";
 import Cartproduct from "./cartproduct";
 import Cartsummary from "./cartSummary";
 

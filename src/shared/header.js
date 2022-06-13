@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../assets/style/header.css";
 import coll from "../assets/image/coll.svg";
-import remove from "../assets/image/remo.png";
+import remove from "../assets/image/bag.svg";
 import user from "../assets/image/profile.svg";
 import logout from "../assets/image/logout.svg";
 import cart from "../assets/image/cart.svg";

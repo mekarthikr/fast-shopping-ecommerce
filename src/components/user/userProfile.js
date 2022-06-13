@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import "../assets/style/userProfile.css"
+import "../../assets/style/userProfile.css"
 
 export default function UserProfile()
 {
@@ -13,7 +13,7 @@ export default function UserProfile()
         navigate("/edit", { state: user });
       };
     return(
-        <div className="profile">
+        <div className="profile-user">
         <h1>ACCOUNT PROFILE</h1>
         <hr/>
         <div className="profile-img bg-blue">

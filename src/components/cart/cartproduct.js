@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
-import "../assets/style/productcard.css";
-import { addProductToCart, removeProductFromCart } from "../redux/actions";
-import "../assets/style/cart.css";
-import close from "../assets/image/close.png";
+import "../../assets/style/productcard.css";
+import { addProductToCart, removeProductFromCart } from "../../redux/actions";
+import "../../assets/style/cart.css";
+import close from "../../assets/image/close.png";
 
 export default function Cartproduct(props) {
   let dispatch = useDispatch();
