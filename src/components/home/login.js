@@ -2,11 +2,14 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { API } from "../../api/api";
 import { useNavigate, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "../../assets/style/login.css";
+import { userLoggedIn } from "../../redux/actions";
 // import  { ValidateLogin } from "../validation/register";
 
 function Login() {
   let navigate = useNavigate();
+  let dispatch = useDispatch();
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -35,23 +38,22 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(user)
     // setError("hello")
     // console.log(error)
     // ValidateLogin(state);
     // setError({Error:"Error"})
     // console.log("Error",Error)
+
     let profile = user.find(
       (index) => index.email === email && index.password === password
     );
     if (profile !== undefined) {
       localStorage.setItem("id", profile.id);
       setError("")
-      //useDispa
+      dispatch(userLoggedIn())
       navigate("/product", { profile });
-      // console.log("true");
     } else {
-      // console.log("false");
-      // setError("false")
       setError("Invalid Login Credentials")
     }
   };

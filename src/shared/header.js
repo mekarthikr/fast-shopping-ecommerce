@@ -8,6 +8,26 @@ import cart from "../assets/image/cart.svg";
 import { Link } from "react-router-dom";
 
 export default class Header extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      log: true
+    }
+    // this.loggedIn = this.loggedIn.bind(this)
+  }
+
+   loggedIn() {
+
+    console.log("in logg")
+
+    if (this.state.log) {
+      return true
+    }
+
+    return false
+  }
+
   render() {
     return (
       <>
@@ -33,30 +53,34 @@ export default class Header extends Component {
               <img src={coll} className="icon" width={"60px"} alt="img" />
             </span>
           </button>
-          <div className="collapse navbar-collapse a float-right" id="navbarNavDropdown">
-            <ul className="navbar-nav ">
-              <li className="nav-item">
-                <a className="a" >
-                <Link to="/profile">
-                  <img src={user} className="icon" width={"35px"} alt="img" />
-                  {/* <p >Profile</p> */}
-                  </Link>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="a" >
-                <Link to="/cart">
-                  <img src={cart} className="icon" width={"35px"} alt="img" />
-                  </Link>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="a">
-                  <img src={logout} className="icon" width={"35px"} alt="img" style={{marginLeft:"700px"}} />
-                </a>
-              </li>
-            </ul>
-          </div>
+          {
+            this.loggedIn() &&
+            <div className="collapse navbar-collapse a float-right" id="navbarNavDropdown">
+              <ul className="navbar-nav ">
+                <li className="nav-item">
+                  <a className="a" >
+                    <Link to="/profile">
+                      <img src={user} className="icon" width={"35px"} alt="img" />
+                      {/* <p >Profile</p> */}
+                    </Link>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="a" >
+                    <Link to="/cart">
+                      <img src={cart} className="icon" width={"35px"} alt="img" />
+                    </Link>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="a">
+                    <img src={logout} className="icon" width={"35px"} alt="img" style={{ marginLeft: "700px" }} />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          }
+
         </nav>
       </>
     );

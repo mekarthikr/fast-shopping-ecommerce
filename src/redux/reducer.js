@@ -52,6 +52,11 @@ const usersReducers = (state = initialState, action) => {
         product: action.payload,
         loading: false,
       };
+      case types.USER_LOGGED_IN:
+        return{
+          ...state,
+          isLogin:action.payload
+        }
       // case types.ADD_TO_CART:
       //   const newCart=[...state,action.payload]
 
