@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import "../assets/style/productcard.css";
@@ -19,9 +19,9 @@ export default function Productcard(props) {
         className="card-img-top card-image"
         alt="product"
       />
-      <div className="card-body ">
+      <div className="card-body">
         <h5 className="card-title">{props.details.productname}</h5>
-        <p className="card-text">{props.details.price}/- </p>
+        <p className="card-text">Rs-{props.details.price}/- </p>
         <div className="bottom-btn">
         <Link to={`/product/${props.details.id}`}>
           <a className="btn bg-blue">VIEW</a>

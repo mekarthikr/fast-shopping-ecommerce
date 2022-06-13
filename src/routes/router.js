@@ -8,12 +8,14 @@ import Edituser from "../components/editUser";
 import { Admin } from "../components/admin";
 import Adminpanel from "../components/adminPanel";
 import Editproduct from "../components/editproduct";
-// import Prototype from "../components/prototype";
 import AddProduct from "../components/addProduct";
 import Viewproduct from "../components/viewproduct";
 import Cart from "../components/cart";
 
 export function Router() {
+
+  
+
   return (
     <BrowserRouter>
       <Header />
@@ -26,7 +28,6 @@ export function Router() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/adminpanel" element={<Adminpanel />} />
         <Route path="/editproduct/:id" element={<Editproduct />} />
-        {/* <Route path="/prototype" element={<Prototype />} /> */}
         <Route path="/addProduct" element={<AddProduct />} />
         <Route path="/product/:id" element={<Viewproduct />} />
         <Route path="/cart" element={<Cart />} />
