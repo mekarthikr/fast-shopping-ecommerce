@@ -53,10 +53,10 @@ export default function PersonList() {
         <h3 className="color-blue">
           Hi {state.firstname} {state.lastname}
         </h3>
-        <button className="bg-blue color-white" onClick={editHandle}>
+        {/* <button className="bg-blue color-white" onClick={editHandle}>
           {" "}
           Edit Profile{" "}
-        </button>
+        </button> */}
       </div>
       <div className="main-container row">
         {products.map((products) => (

@@ -209,3 +209,10 @@ export const userLoggedIn = () => (
     payload:true
   }
 );
+
+export const userLoggedOut = () => (
+  {
+    type:types.USER_LOGGED_OUT,
+    payload:false
+  }
+);

@@ -12,14 +12,13 @@ import AddProduct from "../components/admin/addProduct";
 import Viewproduct from "../components/product/viewproduct";
 import Cart from "../components/cart/cart";
 import UserProfile from "../components/user/userProfile";
-
+import  ValidateSession from "../validation/validateSession";
 
 export function Router() {
-
-  
-
+  ValidateSession()
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
+    <>
       <Header />
       <Routes>
         <Route path="/product" element={<Productlist />} />
@@ -35,6 +34,7 @@ export function Router() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<UserProfile />} />
       </Routes>
-    </BrowserRouter>
+    {/* </BrowserRouter> */}
+  </>
   );
 }

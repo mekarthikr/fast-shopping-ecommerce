@@ -15,3 +15,4 @@ export const STATE = "STATE";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 
 export const USER_LOGGED_IN = "USER_LOGGED_IN";
+export const USER_LOGGED_OUT = "USER_LOGGED_OUT";

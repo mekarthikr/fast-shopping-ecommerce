@@ -57,6 +57,11 @@ const usersReducers = (state = initialState, action) => {
           ...state,
           isLogin:action.payload
         }
+        case types.USER_LOGGED_OUT:
+        return{
+          ...state,
+          isLogin:action.payload
+        }
       // case types.ADD_TO_CART:
       //   const newCart=[...state,action.payload]
 

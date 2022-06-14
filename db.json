@@ -13,23 +13,16 @@
       "email": "a",
       "password": "a",
       "id": 2
+    },
+    {
+      "firstname": "edwin",
+      "lastname": "gnana",
+      "email": "e@m.com",
+      "password": "mmmmmmm",
+      "id": 3
     }
   ],
   "products": [
-    {
-      "productname": "Apple iPhone 12",
-      "image": "https://m.media-amazon.com/images/I/711wsjBtWeL._SX679_.jpg",
-      "color": "White",
-      "price": 54900,
-      "id": 1
-    },
-    {
-      "productname": "Razer DeathAdder V2",
-      "image": "https://m.media-amazon.com/images/I/61doJ9AKCPL._SX679_.jpg",
-      "color": "Black",
-      "price": 3599,
-      "id": 2
-    },
     {
       "productname": "One Plus 10R",
       "image": "https://m.media-amazon.com/images/I/716uVx3Wr5L._SX679_.jpg",
@@ -43,6 +36,13 @@
       "color": "Lavender",
       "price": 54999,
       "id": 4
+    },
+    {
+      "productname": "Marshall Acton II",
+      "image": "https://m.media-amazon.com/images/I/51Tn3qxqr3L._SX522_.jpg",
+      "color": "black",
+      "price": "24999",
+      "id": 5
     }
   ],
   "admin": [
