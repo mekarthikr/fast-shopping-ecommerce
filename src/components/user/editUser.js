@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import React, { useEffect } from "react";
 import { getSingleUser } from "../../redux/actions";
-import { updateUser } from "../../redux/actions";
+import { updateUser,userLoggedOut } from "../../redux/actions";
 
 export default function Edituser() {
   const location = useLocation();
@@ -42,6 +42,7 @@ export default function Edituser() {
     } else {
       dispatch(updateUser(state, location.state.id));
       localStorage.clear();
+      dispatch(userLoggedOut())
       navigate("/login");
     }
   };

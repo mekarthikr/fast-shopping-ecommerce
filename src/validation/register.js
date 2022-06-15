@@ -1,27 +1,16 @@
-// import { useSelector } from "react-redux";
-
 export function ValidateRegister(state)
 {
-    const nameRegex = /^[a-zA-Z]{2,15}$/;
+    const nameRegex = /^[a-zA-Z]{1,15}$/;
     const emailRegex = /^([a-zA-Z0-9_\.\-]+)@([a-zA-Z]+)\.([a-zA-Z]{2,5})$/;
-    const passwordRegex = /^[A-Za-z0-9]{7,15}$/;
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#,@,$,%,!]).{8,}$/;
     const error={
         firstnameError: "",
         lastnameError: "",
         emailError: "",
-        passwordError: ""
+        passwordError: "",
+        passwordConfirmError:""
     }
     console.log("called",state)
-    // if(state.firstname==""||state.lastname==""||state.email==""||state.password==="")
-    // {
-    //     // firstnameError="error"
-    //     error.firstnameError= "errr"
-    //     error.lastnameError= "eee"
-    //     error.emailError= "err"
-    //     error.passwordError= "errr"
-    // }
-    // if(state.firstname=="")
-    // return(error)
     if(state.firstname === "") {
          error.firstnameError = "First Name field is required";
     }
@@ -46,8 +35,17 @@ export function ValidateRegister(state)
     else if(!passwordRegex.test(state.password)) {
         error.passwordError = "Please provide a valid Password";
     }
+    if( state.password!=="" && state.confirmpassword===state.password)
+    {
+        error.passwordConfirmError="Plesae enter correct Password"
+    }
+    else if(state.confirmpassword === "")
+    {
+        error.passwordConfirmError="Confirm Password field is required"
+    }
 
-    if(error.firstnameError || error.lastnameError || error.emailError || error.passwordError) {
+    if(error.firstnameError || error.lastnameError || error.emailError || error.passwordError||error.confirmPassword) {
+        console.log("error",error)
         return error;
     }
 

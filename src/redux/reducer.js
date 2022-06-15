@@ -7,7 +7,7 @@ const initialState = {
   loading: true,
   cart:[],
   value:[],
-  isLogin:false
+  isLogin:true
 };
 
 const usersReducers = (state = initialState, action) => {
@@ -60,7 +60,8 @@ const usersReducers = (state = initialState, action) => {
         case types.USER_LOGGED_OUT:
         return{
           ...state,
-          isLogin:action.payload
+          isLogin:action.payload,
+          user:{}
         }
       // case types.ADD_TO_CART:
       //   const newCart=[...state,action.payload]

@@ -21,5 +21,4 @@ export default function ValidateSession() {
             return (false)
         }
     }
-    // return(true)
 }

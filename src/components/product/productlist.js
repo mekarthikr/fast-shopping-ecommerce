@@ -49,21 +49,20 @@ export default function PersonList() {
   };
   return (
     <div className="main-container profile">
-      <div className="profile-details">
+      {/* <div className="profile-details">
         <h3 className="color-blue">
           Hi {state.firstname} {state.lastname}
         </h3>
-        {/* <button className="bg-blue color-white" onClick={editHandle}>
+        <button className="bg-blue color-white" onClick={editHandle}>
           {" "}
           Edit Profile{" "}
-        </button> */}
-      </div>
+        </button>
+      </div> */}
       <div className="main-container row">
         {products.map((products) => (
           <Productcard key={products.id} details={products} />
         ))}
       </div>
-      <button onClick={() => navigate("/cart")}>button</button>
     </div>
   );
 }

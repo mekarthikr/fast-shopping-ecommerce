@@ -4,6 +4,9 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../../redux/actions";
 import { useNavigate } from "react-router-dom";
 import { ValidateRegister } from "../../validation/register";
+import tool from "../../assets/image/questioncircle.svg"
+import { Tooltip } from "@mui/material";
+
 
 export default function Register() {
   const [state, setState] = useState({
@@ -11,15 +14,17 @@ export default function Register() {
     lastname: "",
     email: "",
     password: "",
+    confirmpassword: "",
   });
-  const defaultError={
+  const defaultError = {
     firstnameError: "",
     lastnameError: "",
     emailError: "",
-    passwordError: ""
+    passwordError: "",
+    passwordConfirmError:""
   }
   const [
-    { firstnameError, lastnameError, emailError, passwordError },
+    { firstnameError, lastnameError, emailError, passwordError,passwordConfirmError },
     setError
   ] = useState(defaultError);
   // const [error, setError] = useState({
@@ -49,21 +54,18 @@ export default function Register() {
     //   dispatch(addUser(state));
     //   navigate("/login");
     // }
-    function clearState()
-    {
+    function clearState() {
       setError(defaultError)
     }
-    const validate=ValidateRegister(state)
-    if(validate==true)
-    {
+    const validate = ValidateRegister(state)
+    if (validate === true) {
       clearState()
       dispatch(addUser(state));
       navigate("/login");
     }
-    else
-    {
+    else {
       setError(validate)
-      console.log(firstnameError,lastnameError,emailError,passwordError)
+      console.log("error",firstnameError, lastnameError, emailError, passwordError,passwordConfirmError)
     }
   };
 
@@ -109,7 +111,7 @@ export default function Register() {
             <p className="register-error color-red" >{emailError}</p>
           </div>
           <div className="form-group">
-            <label>PASSWORD</label>
+            <label>PASSWORD <Tooltip title={"Password should be \nlength greater than 8\nShould contain atleast one\nalphabets upper and lower case \nnumber \nspecial characters[@,#,$,%,&,!]"} placement="right"><img src={tool} /></Tooltip></label>
             <input
               className="form-control form-input"
               type={"text"}
@@ -118,6 +120,16 @@ export default function Register() {
             />
             <p className="register-error color-red" >{passwordError}</p>
           </div>
+          <div className="form-group">
+            <label>CONFIRM PASSWORD</label>
+            <input
+              className="form-control form-input"
+              type={"password"}
+              name="confirmpassword"
+              onChange={handleInputChange}
+            />
+            <p className="register-error color-red" >{passwordConfirmError}</p>
+          </div>
           <div className="form-check">
             <input required
               className="form-check-input check"
@@ -125,7 +137,7 @@ export default function Register() {
               value=""
             />
             <label className="form-check-label">
-              By checking here, you agree to our <strong>Terms</strong>.
+              By checking here, you agree to our <strong>T&C</strong>.
             </label>
           </div>
           <button type="submit" className="login-button">
@@ -137,3 +149,10 @@ export default function Register() {
     </>
   );
 }
+
+
+
+
+
+
+// </Tooltip>
