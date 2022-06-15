@@ -1,13 +1,15 @@
 import "../../assets/style/register.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import React, { useEffect } from "react";
 import { addProductToCart, getSingleProduct } from "../../redux/actions";
 import "../../assets/style/viewproduct.css";
+import arrow from "../../assets/image/arrowleft.svg"
 
 export default function Viewproduct() {
+  const navigate=useNavigate()
   const { id } = useParams();
   console.log("id", id);
   const [state, setState] = useState({
@@ -17,7 +19,7 @@ export default function Viewproduct() {
     price: "",
   });
   const { product } = useSelector((state) => state.data);
-  console.log("product", product);
+  //console.log("product", product);
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSingleProduct(id));
@@ -27,16 +29,23 @@ export default function Viewproduct() {
       setState({ ...product });
     }
   }, [product]);
-  console.log(state);
+ // console.log(state);
   const addToCart = (e) => {
-    console.log(e);
+   // console.log(e);
     e.preventDefault();
-    console.log("called");
+   // console.log("called");
     dispatch(addProductToCart(product));
   };
+  function goBack()
+  {
+    console.log("back")
+    navigate(-1)
+  }
   return (
     <>
+ 
       <div className="container main-view-product">
+      <img src={arrow} width={"40px"} onClick={()=>goBack()}/>
         <div className="row">
           <div className="col">
             <img

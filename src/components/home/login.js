@@ -38,7 +38,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user)
+    // console.log(user)
     // setError("hello")
     // console.log(error)
     // ValidateLogin(state);
@@ -77,7 +77,7 @@ function Login() {
             <label>PASSWORD</label>
             <input
               className="form-control form-input"
-              type={"text"}
+              type={"password"}
               name="password"
               onChange={handleInputChange}
             />

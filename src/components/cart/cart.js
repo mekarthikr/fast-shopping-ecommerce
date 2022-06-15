@@ -7,14 +7,14 @@ import Cartsummary from "./cartSummary";
 
 export default function Cart() {
   const { value } = useSelector((state) => state.data);
-  console.log("value", value);
+  //console.log("value", value);
   const getTotal = (cartItem) => {
     const price = cartItem.reduce(
       (totalPrice, item) => totalPrice + item.price,0);
-    console.log("price", price);
+    //console.log("price", price);
     return price;
   };
-  console.log(getTotal(value));
+  //console.log(getTotal(value));
   return (
     <>
       <div className="cart-container">

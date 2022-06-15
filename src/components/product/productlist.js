@@ -31,7 +31,7 @@ export default function PersonList() {
   }, []);
   const { user } = useSelector((state) => state.data);
   const { value } = useSelector((state) => state.data);
-  console.log("value", value);
+ // console.log("value", value);
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSingleUser(id));
@@ -42,7 +42,7 @@ export default function PersonList() {
       setState({ ...user });
     }
   }, [user]); // eslint-disable-line react-hooks/exhaustive-deps
-  console.log(state);
+ // console.log(state);
   const editHandle = (e) => {
     e.preventDefault();
     navigate("/edit", { state: state });

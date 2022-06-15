@@ -8,8 +8,11 @@
     text-decoration: none;
   }
   .a:hover{
-    color: white;
+    color: rgb(255, 89, 90);
     text-decoration: none;
+  }
+  .header-name:hover{
+    color: rgb(239, 224, 202);
   }
   nav
 {

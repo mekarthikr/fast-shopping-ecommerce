@@ -6,13 +6,13 @@ import "../../assets/style/cartsummary.css";
 
 export default function Cartsummary() {
   const { value } = useSelector((state) => state.data);
-  console.log("value", value);
+ // console.log("value", value);
   const getTotal = (cartItem) => {
     const price = cartItem.reduce(
-      (totalPrice, item) => totalPrice + item.price,
+      (totalPrice, item) => totalPrice + parseInt(item.price),
       0
     );
-    console.log("price", price);
+   // console.log("price", price);
     return price;
   };
   return (

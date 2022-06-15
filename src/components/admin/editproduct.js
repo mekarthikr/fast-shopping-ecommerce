@@ -13,7 +13,7 @@ export default function Prototype() {
   const location = useLocation();
   let navigate = useNavigate();
   let { id } = useParams();
-  console.log(location);
+  //console.log(location);
   const [state, setState] = useState({
     productname: "",
     image: "",
@@ -36,12 +36,12 @@ export default function Prototype() {
     let { name, value } = e.target;
     setState({ ...state, [name]: value });
   };
-  console.log("user", product);
-  console.log("state", state);
+ // console.log("user", product);
+  //console.log("state", state);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!productname || !image || !color || !price) {
-      console.log("enter form");
+    //  console.log("enter form");
     } else {
       dispatch(updateProduct(state, id));
       navigate("/adminpanel");

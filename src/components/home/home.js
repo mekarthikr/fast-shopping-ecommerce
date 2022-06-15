@@ -1,10 +1,16 @@
 import { Component } from "react";
 import image_1 from "../../assets/image/img.png";
 import "../../assets/style/home.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-export default class Home extends Component {
-  render() {
+export default function Home (){
+  const{isLogin}=useSelector((state)=>state.data)
+  const navigate=useNavigate()
+  function navigateTo()
+  {
+    isLogin?navigate("product"):navigate("login")
+  }
     return (
       <>
         <div>
@@ -18,9 +24,9 @@ export default class Home extends Component {
               <p className="font-p">
                 Life is hard enough already. Let us make it a little easier.
               </p>
-              <Link to={"/login"}>
-                <button className="home-button">Get Started</button>
-              </Link>
+              {/* <Link to={"/login"}> */}
+                <button className="home-button" onClick={()=>navigateTo()}>Get Started</button>
+              {/* </Link> */}
             </div>
             <div className="col-md m-l padding-0">
               <span className="">
@@ -191,5 +197,4 @@ export default class Home extends Component {
         </div>
       </>
     );
-  }
 }

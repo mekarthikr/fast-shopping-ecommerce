@@ -6,7 +6,7 @@ import "../../assets/style/userProfile.css"
 export default function UserProfile() {
     let navigate = useNavigate();
     const { user } = useSelector((state) => state.data)
-    console.log("user", user)
+   // console.log("user", user)
     const editHandle = (e) => {
         e.preventDefault();
         navigate("/edit", { state: user });
@@ -32,7 +32,7 @@ export default function UserProfile() {
                     </div>
                 </div>
             </div>
-            <button className="bg-blue color-white" onClick={editHandle}>
+            <button style={{margin:"5% 40% 0 40%",width:"20%"}} className="bg-blue color-white" onClick={editHandle}>
                 {" "}
                 Edit Profile{" "}
             </button>

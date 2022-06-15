@@ -36,9 +36,9 @@ export function Admin() {
     );
     if (profile !== undefined) {
       navigate("/adminpanel", { profile });
-      console.log("true");
+     // console.log("true");
     } else {
-      console.log("false");
+      //console.log("false");
     }
   };
   return (

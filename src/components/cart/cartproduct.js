@@ -7,9 +7,9 @@ import close from "../../assets/image/close.png";
 export default function Cartproduct(props) {
   let dispatch = useDispatch();
   const addToCart = (e) => {
-    console.log(e);
+    //console.log(e);
     e.preventDefault();
-    console.log("called");
+  //  console.log("called");
     dispatch(addProductToCart(props.details));
   };
   const removeFromCart = () => {

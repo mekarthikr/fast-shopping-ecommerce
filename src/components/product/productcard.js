@@ -3,16 +3,19 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import "../../assets/style/productcard.css";
 import { addProductToCart } from "../../redux/actions";
+import arrow from "../../assets/image/arrowleft.svg"
 
 export default function Productcard(props) {
   let dispatch = useDispatch();
   const addToCart = (e) => {
-    console.log(e);
+   // console.log(e);
     e.preventDefault();
-    console.log("called");
+   // console.log("called");
     dispatch(addProductToCart(props.details));
   };
   return (
+    <>
+    {/* <img src={arrow}/> */}
     <div className="card col-6 cardwidth">
       <img
         src={props.details.image}
@@ -32,5 +35,6 @@ export default function Productcard(props) {
         </div>
       </div>
     </div>
+    </>
   );
 }

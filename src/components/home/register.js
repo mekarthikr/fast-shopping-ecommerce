@@ -65,7 +65,7 @@ export default function Register() {
     }
     else {
       setError(validate)
-      console.log("error",firstnameError, lastnameError, emailError, passwordError,passwordConfirmError)
+    //  console.log("error",firstnameError, lastnameError, emailError, passwordError,passwordConfirmError)
     }
   };
 

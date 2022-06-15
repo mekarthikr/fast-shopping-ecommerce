@@ -16,10 +16,10 @@ export default function Header() {
   const { isLogin, value, user } = useSelector((state) => state.data)
   let dispatch = useDispatch();
   let navigate = useNavigate();
-  console.log("cart value in header", value)
+ // console.log("cart value in header", value)
   useEffect(() => { }, [isLogin, value])
   function handlelogout(e) {
-    console.log("logout")
+    //console.log("logout")
     dispatch(userLoggedOut())
     navigate("/login")
 
@@ -27,7 +27,6 @@ export default function Header() {
 
   return (
     <>
-      {console.log("header")}
       <nav className="navbar navbar-expand-lg navbar-light nav-bar">
         <a className="navbar-brand" >
           <img src={remove} width="40" height="40" className="" alt="img" />
@@ -51,8 +50,8 @@ export default function Header() {
         </button>
         {isLogin &&
           <div className="collapse navbar-collapse a float-right" style={{ float: "right" }} id="navbarNavDropdown">
-            <div>
-              <h2 style={{ fontWeight: "700", fontSize: "22px", maxHeight: "20px" }}>Hi {user.firstname} {user.lastname}</h2>
+            <div className="header-name">
+              <h3 className="header-name" style={{ fontWeight: "700", fontSize: "22px", maxHeight: "20px",color:"rgb(239, 224, 202);!important" }}>Hi {user.firstname} {user.lastname}</h3>
             </div>
             <ul style={{ marginLeft: "auto" }} className="navbar-nav ">
               <li className="nav-item">

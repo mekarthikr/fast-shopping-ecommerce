@@ -21,9 +21,9 @@ export default function AddProduct() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!productname || !image || !color || !price) {
-      console.log("enter data");
+   //   console.log("enter data");
     } else {
-      console.log(state);
+    //  console.log(state);
       dispatch(addProduct(state));
       navigate("/adminpanel");
     }
@@ -71,7 +71,7 @@ export default function AddProduct() {
                 <label className="color-white">PRICE</label>
                 <input
                   className="form-control form-input"
-                  type={"text"}
+                  type={"number"}
                   name="price"
                   value={price || ""}
                   onChange={handleInputChange}
@@ -89,7 +89,7 @@ export default function AddProduct() {
           </div>
           <button type="submit" className="login-button">
             {" "}
-            UPDATE{" "}
+            ADD{" "}
           </button>
         </form>
       </div>
