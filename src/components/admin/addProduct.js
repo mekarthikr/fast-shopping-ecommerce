@@ -23,7 +23,6 @@ export default function AddProduct() {
     if (!productname || !image || !color || !price) {
    //   console.log("enter data");
     } else {
-    //  console.log(state);
       dispatch(addProduct(state));
       navigate("/adminpanel");
     }

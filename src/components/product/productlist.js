@@ -31,7 +31,6 @@ export default function PersonList() {
   }, []);
   const { user } = useSelector((state) => state.data);
   const { value } = useSelector((state) => state.data);
- // console.log("value", value);
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSingleUser(id));
@@ -42,22 +41,12 @@ export default function PersonList() {
       setState({ ...user });
     }
   }, [user]); // eslint-disable-line react-hooks/exhaustive-deps
- // console.log(state);
   const editHandle = (e) => {
     e.preventDefault();
     navigate("/edit", { state: state });
   };
   return (
     <div className="main-container profile">
-      {/* <div className="profile-details">
-        <h3 className="color-blue">
-          Hi {state.firstname} {state.lastname}
-        </h3>
-        <button className="bg-blue color-white" onClick={editHandle}>
-          {" "}
-          Edit Profile{" "}
-        </button>
-      </div> */}
       <div className="main-container row">
         {products.map((products) => (
           <Productcard key={products.id} details={products} />

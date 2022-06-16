@@ -136,6 +136,7 @@ export const getSingleUser = (id) => {
 
 export const getSingleProduct = (id) => {
   return function (dispatch) {
+    console.log("called")
     axios
       .get(`${API_PRODUCTS}/${id}`)
       .then((resp) => {
@@ -172,21 +173,6 @@ export const updateProduct = (product, id) => {
 
 export const addToCart = (item) => (
   console.log(item)
-//   {
-//   type:types.ADD_TO_CART,
-//   payload:item
-//   // return function (dispatch) {
-//   //   // axios
-//   //   //   .put(`${API_PRODUCTS}/${id}`, product)
-//   //   //   .then((resp) => {
-//   //   //     console.log("resp", resp);
-//   //   //     dispatch(productUpdated());
-//   //   //   })
-//   //   //   .catch((error) => console.log(error));
-//   //   // dispatch(addCart(product))
-//   //   // console.log(product)
-//   // };
-// }
 );
 
 export const addProductToCart = (value) => (

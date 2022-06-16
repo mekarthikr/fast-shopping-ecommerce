@@ -10,7 +10,6 @@ export default function ValidateSession() {
     let url = window.location.href;
 
     if (url.indexOf('login') > -1 || url.indexOf('register') > -1 || url.indexOf('admin') > -1 || url === 'http://localhost:3000/') {
-       // console.log("in route",isLogin)
         return true
     }
     else

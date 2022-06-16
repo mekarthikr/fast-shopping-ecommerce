@@ -19,7 +19,6 @@ export default function Viewproduct() {
     price: "",
   });
   const { product } = useSelector((state) => state.data);
-  //console.log("product", product);
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSingleProduct(id));
@@ -29,11 +28,8 @@ export default function Viewproduct() {
       setState({ ...product });
     }
   }, [product]);
- // console.log(state);
   const addToCart = (e) => {
-   // console.log(e);
     e.preventDefault();
-   // console.log("called");
     dispatch(addProductToCart(product));
   };
   function goBack()

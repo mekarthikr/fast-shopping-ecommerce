@@ -1,22 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import "../../assets/style/productcard.css";
 import { addProductToCart } from "../../redux/actions";
-import arrow from "../../assets/image/arrowleft.svg"
 
 export default function Productcard(props) {
   let dispatch = useDispatch();
   const addToCart = (e) => {
-   // console.log(e);
     e.preventDefault();
-   // console.log("called");
     dispatch(addProductToCart(props.details));
   };
   return (
     <>
-    {/* <img src={arrow}/> */}
-    <div className="card col-6 cardwidth">
+    <div className="card col-2 cardwidth">
       <img
         src={props.details.image}
         className="card-img-top card-image"

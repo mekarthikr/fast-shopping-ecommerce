@@ -11,20 +11,18 @@ import { updateUser,userLoggedOut } from "../../redux/actions";
 export default function Edituser() {
   const location = useLocation();
   let navigate = useNavigate();
-  //console.log("location",location.state);
   const [state, setState] = useState({
     firstname: "",
     lastname: "",
     email: "",
     password: "",
   });
-  //console.log(state)
   const { user } = useSelector((state) => state.data);
   let dispatch = useDispatch();
   const { firstname, lastname, email, password } = state;
   useEffect(() => {
     dispatch(getSingleUser(location.state.id));
-  }, []);
+  },[]);
   useEffect(() => {
     if (user) {
       setState({ ...user });
@@ -34,7 +32,6 @@ export default function Edituser() {
     let { name, value } = e.target;
     setState({ ...state, [name]: value });
   };
-  //console.log(state);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!firstname || !lastname || !email || !password) {

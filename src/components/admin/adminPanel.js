@@ -14,13 +14,11 @@ export default function Adminpanel() {
     dispatch(loadProducts());
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const handleDelete = (id) => {
-   // console.log("id", id);
     dispatch(deleteProduct(id));
   };
   function handleEdit(id) {
     navigate(`/editproduct/${id}`);
   }
-  //console.log(products);
   function addProduct() {
     navigate("/addProduct");
   }

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "../components/home/home";
 import Login from "../components/home/login";
 import Register from "../components/home/register";
@@ -7,7 +7,7 @@ import Productlist from "../components/product/productlist";
 import Edituser from "../components/user/editUser";
 import { Admin } from "../components/admin/admin";
 import Adminpanel from "../components/admin/adminPanel";
-import Editproduct from "../components/admin/editproduct";
+import Prototype from "../components/admin/editproduct";
 import AddProduct from "../components/admin/addProduct";
 import Viewproduct from "../components/product/viewproduct";
 import Cart from "../components/cart/cart";
@@ -17,7 +17,6 @@ import  ValidateSession from "../validation/validateSession";
 export function Router() {
   ValidateSession()
   return (
-    // <BrowserRouter>
     <>
       <Header />
       <Routes>
@@ -28,13 +27,12 @@ export function Router() {
         <Route path="/edit" element={<Edituser />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/adminpanel" element={<Adminpanel />} />
-        <Route path="/editproduct/:id" element={<Editproduct />} />
+        <Route path="/editproduct/:id" element={<Prototype />} />
         <Route path="/addProduct" element={<AddProduct />} />
         <Route path="/product/:id" element={<Viewproduct />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<UserProfile />} />
       </Routes>
-    {/* </BrowserRouter> */}
   </>
   );
 }

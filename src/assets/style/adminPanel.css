@@ -34,10 +34,10 @@
 }
 .admin-button
 {
-    margin:1rem 20%;
+    margin:1rem 19.93%;
     height: 3rem;
     width: 8rem;
-    border: 0;
+    /* border: 1px solid black; */
     border-radius: 0%;
     color:rgb(239, 224, 202);
     background-color: #001233;

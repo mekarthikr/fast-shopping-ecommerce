@@ -6,7 +6,6 @@ import "../../assets/style/userProfile.css"
 export default function UserProfile() {
     let navigate = useNavigate();
     const { user } = useSelector((state) => state.data)
-   // console.log("user", user)
     const editHandle = (e) => {
         e.preventDefault();
         navigate("/edit", { state: user });

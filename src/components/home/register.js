@@ -27,13 +27,6 @@ export default function Register() {
     { firstnameError, lastnameError, emailError, passwordError,passwordConfirmError },
     setError
   ] = useState(defaultError);
-  // const [error, setError] = useState({
-  //   firstnameError: "Enter proper name",
-  //   lastnameError: "Enter proper name",
-  //   emailError: "Enter valid mail id",
-  //   passwordError: "Enter valid mail id",
-  // });
-
   let dispatch = useDispatch();
   let navigate = useNavigate();
   const { firstname, lastname, email, password } = state;
@@ -43,17 +36,6 @@ export default function Register() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(firstnameError)
-    // console.log(state)
-    // setState(change)
-    // console.log(state)
-    // if (!firstname || !lastname || !email || !password) {
-    //   console.log("enter data");
-    // } else {
-    //   console.log(state);
-    //   dispatch(addUser(state));
-    //   navigate("/login");
-    // }
     function clearState() {
       setError(defaultError)
     }
@@ -65,7 +47,6 @@ export default function Register() {
     }
     else {
       setError(validate)
-    //  console.log("error",firstnameError, lastnameError, emailError, passwordError,passwordConfirmError)
     }
   };
 
@@ -149,10 +130,3 @@ export default function Register() {
     </>
   );
 }
-
-
-
-
-
-
-// </Tooltip>

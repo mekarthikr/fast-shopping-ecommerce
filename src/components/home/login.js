@@ -5,7 +5,6 @@ import { useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import "../../assets/style/login.css";
 import { userLoggedIn } from "../../redux/actions";
-// import  { ValidateLogin } from "../validation/register";
 
 function Login() {
   let navigate = useNavigate();
@@ -34,17 +33,8 @@ function Login() {
     setState({ ...state, [name]: value });
   };
 
-  // useEffect([error])
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(user)
-    // setError("hello")
-    // console.log(error)
-    // ValidateLogin(state);
-    // setError({Error:"Error"})
-    // console.log("Error",Error)
-
     let profile = user.find(
       (index) => index.email === email && index.password === password
     );

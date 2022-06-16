@@ -10,8 +10,8 @@
     {
       "firstname": "Karthik",
       "lastname": "Reghu",
-      "email": "a",
-      "password": "a",
+      "email": "user",
+      "password": "user",
       "id": 2
     },
     {
@@ -35,7 +35,7 @@
       "productname": "One Plus 10R",
       "image": "https://m.media-amazon.com/images/I/716uVx3Wr5L._SX679_.jpg",
       "color": "Forest Green",
-      "price": 38999,
+      "price": "37999",
       "id": 1
     },
     {
@@ -53,11 +53,18 @@
       "id": 3
     },
     {
-      "productname": "Acer Predator Helios 300",
-      "image": "https://m.media-amazon.com/images/I/71Xk9qt6IwL._SX522_.jpg",
-      "color": "Black",
-      "price": "137910",
+      "productname": "Apple MacBook Air 2020",
+      "image": "https://m.media-amazon.com/images/I/71vFKBpKakL._SX679_.jpg",
+      "color": "Gold",
+      "price": "92900",
       "id": 4
+    },
+    {
+      "productname": "MSI GeForce RTX 3090",
+      "image": "https://m.media-amazon.com/images/I/81f6GdD799L._SX522_.jpg",
+      "color": "Black",
+      "price": "182799",
+      "id": 5
     }
   ],
   "admin": [

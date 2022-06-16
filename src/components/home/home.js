@@ -1,7 +1,6 @@
-import { Component } from "react";
 import image_1 from "../../assets/image/img.png";
 import "../../assets/style/home.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Home (){
@@ -24,9 +23,7 @@ export default function Home (){
               <p className="font-p">
                 Life is hard enough already. Let us make it a little easier.
               </p>
-              {/* <Link to={"/login"}> */}
                 <button className="home-button" onClick={()=>navigateTo()}>Get Started</button>
-              {/* </Link> */}
             </div>
             <div className="col-md m-l padding-0">
               <span className="">
@@ -50,7 +47,7 @@ export default function Home (){
               <span>
                 <a>
                   <img
-                    className="product-img"
+                    className="product-img" alt="icon"
                     src="https://m.media-amazon.com/images/I/718ETwvLVOL._SY450_.jpg"
                   />
                 </a>
@@ -65,7 +62,7 @@ export default function Home (){
               <span>
                 <a>
                   <img
-                    className="product-img"
+                    className="product-img" alt="icon"
                     src="https://m.media-amazon.com/images/I/61rDecG7fdL._AC_SS450_.jpg"
                   />
                 </a>
@@ -80,7 +77,7 @@ export default function Home (){
               <span>
                 <a>
                   <img
-                    className="product-img"
+                    className="product-img" alt="icon"
                     src="https://m.media-amazon.com/images/I/61WFNqf8hVL._SX522_.jpg"
                   />
                 </a>
@@ -95,7 +92,7 @@ export default function Home (){
               <span>
                 <a>
                   <img
-                    className="product-img"
+                    className="product-img" alt="icon"
                     src="https://m.media-amazon.com/images/I/81dkcPFfZ1L._SX679_.jpg"
                   />
                 </a>
@@ -112,7 +109,7 @@ export default function Home (){
           </div>
           <div>
             <img
-              className="banner"
+              className="banner" alt="banner"
               src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/Wireless/Apple/iPhone11Pro/Pre-book/D12731792_IN_WLM_Apple_PC_LP_top_banner._CB452057853_.jpg"
             />
           </div>
@@ -140,7 +137,7 @@ export default function Home (){
             </div>
             <div className="col-md">
               <img
-                className="detail-img"
+                className="detail-img" alt="image_home"
                 src="https://www.philipkingsley.co.uk/media/LandingPages/Homepage/Free_Delivery.jpg"
               />
             </div>
@@ -148,7 +145,7 @@ export default function Home (){
           <div className="row mar">
             <div className="col-md">
               <img
-                className="detail-img"
+                className="detail-img" alt="image_home"
                 src="http://www.techtalk.gfi.com/wp-content/uploads/2014/12/30-things-to-do-to-secure-your-network-now_SQ.jpg"
               />
             </div>
@@ -186,7 +183,7 @@ export default function Home (){
             </div>
             <div className="col-md">
               <img
-                className="detail-img"
+                className="detail-img" alt="image_home"
                 src="https://sa.visamiddleeast.com/dam/VCOM/global/run-your-business/images/visa-direct-overview-hero-640x640.jpg"
               />
             </div>

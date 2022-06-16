@@ -13,7 +13,6 @@ export default function Prototype() {
   const location = useLocation();
   let navigate = useNavigate();
   let { id } = useParams();
-  //console.log(location);
   const [state, setState] = useState({
     productname: "",
     image: "",
@@ -36,12 +35,9 @@ export default function Prototype() {
     let { name, value } = e.target;
     setState({ ...state, [name]: value });
   };
- // console.log("user", product);
-  //console.log("state", state);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!productname || !image || !color || !price) {
-    //  console.log("enter form");
     } else {
       dispatch(updateProduct(state, id));
       navigate("/adminpanel");
@@ -49,6 +45,7 @@ export default function Prototype() {
   };
   return (
     <>
+    {/* <h1>hello</h1> */}
       <div className="edit-product-block bg-blue">
         <h1 className="color-white">Edit Product</h1>
         <p className="color-white">Enter the modification for the product</p>
@@ -98,7 +95,7 @@ export default function Prototype() {
             </div>
             <div className="col edit-product-view">
               <div className="bg-blue edit-product-card">
-                <img src={image} />
+                <img src={image} alt="image_product"/>
                 <h3 className="color-white">{productname}</h3>
                 <p className="color-white">{color}</p>
                 <p className="color-white">{price}</p>

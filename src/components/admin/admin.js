@@ -3,9 +3,12 @@ import React, { useEffect, useState } from "react";
 import { API_ADMIN } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 import "../../assets/style/admin.css";
+import { useDispatch } from "react-redux";
+import { userLoggedIn } from "../../redux/actions";
 
 export function Admin() {
   let navigate = useNavigate();
+  const dispatch = useDispatch();
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -31,15 +34,13 @@ export function Admin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(userLoggedIn())
     let profile = user.find(
       (index) => index.email === email && index.password === password
     );
     if (profile !== undefined) {
       navigate("/adminpanel", { profile });
-     // console.log("true");
-    } else {
-      //console.log("false");
-    }
+    } 
   };
   return (
     <>
