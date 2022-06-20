@@ -17,7 +17,8 @@ export default function ValidateSession() {
         if(!isLogin)
         {
             navigate("/")
-            return (false)
+            console.log("false")
+            return false
         }
     }
 }

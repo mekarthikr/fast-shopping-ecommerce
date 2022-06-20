@@ -65,6 +65,13 @@
       "color": "Black",
       "price": "182799",
       "id": 5
+    },
+    {
+      "productname": "OnePlus 9 Pro",
+      "image": "https://m.media-amazon.com/images/I/612ytK4luvL._SX522_.jpg",
+      "color": "Pine Green",
+      "price": "54999",
+      "id": 6
     }
   ],
   "admin": [
