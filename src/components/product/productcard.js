@@ -13,14 +13,18 @@ export default function Productcard(props) {
   return (
     <>
     <div className="card col-2 cardwidth">
+      <div className="card-image card-img-main">
       <img
         src={props.details.image}
         className="card-img-top card-image"
         alt="product"
       />
+
+      </div>
+     
       <div className="card-body ">
         <h5 className="card-title color-white">{props.details.productname}</h5>
-        <p className="card-text color-white">Rs-{props.details.price}/- </p>
+        <p className="card-text color-white">Rs {props.details.price}/- </p>
         <div className="bottom-btn">
         <Link to={`/product/${props.details.id}`}>
           <a className="btn bg-white">VIEW</a>

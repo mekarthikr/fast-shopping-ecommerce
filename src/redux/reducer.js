@@ -7,7 +7,7 @@ const initialState = {
   loading: true,
   cart:[],
   value:[],
-  isLogin:false,
+  isLogin:true,
   isAdminLogin:true
 };
 
