@@ -1,11 +1,12 @@
 import "../../assets/style/register.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addUser } from "../../redux/actions";
+// import { addUser } from "../../redux/actions";
 import { useNavigate } from "react-router-dom";
 import { ValidateRegister } from "../../validation/register";
 import tool from "../../assets/image/questioncircle.svg"
 import { Tooltip } from "@mui/material";
+import { addUser } from "../../action/useraction";
 
 export default function Register() {
   let dispatch = useDispatch();

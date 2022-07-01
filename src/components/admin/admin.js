@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import { API_ADMIN } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { userLoggedIn } from "../../redux/actions";
+// import { userLoggedIn } from "../../redux/actions";
 import "../../assets/style/admin.css";
+import { userLoggedIn } from "../../action/useraction";
 
 export function Admin() {
   let navigate = useNavigate();

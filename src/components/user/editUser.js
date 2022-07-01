@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import React, { useEffect } from "react";
-import { getSingleUser } from "../../redux/actions";
-import { updateUser,userLoggedOut } from "../../redux/actions";
+import { updateUser,getSingleUser,userLoggedOut } from "../../action/useraction";
 
 export default function Edituser() {
   const location = useLocation();

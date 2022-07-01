@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addProduct } from "../../redux/actions";
 import { useNavigate } from "react-router-dom";
+import { addProduct } from "../../action/productaction";
 import "../../assets/style/register.css";
 
 export default function AddProduct() {

@@ -34,7 +34,7 @@ export function Router() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<UserProfile />} />
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
   </>
   );
 }

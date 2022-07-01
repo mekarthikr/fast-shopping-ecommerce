@@ -1,4 +1,4 @@
-import * as types from "./actionType";
+import * as types from "../action/actionType";
 const initialState = {
   users: [],
   user: {},
@@ -7,7 +7,7 @@ const initialState = {
   loading: true,
 //   cart:[],
   value:[],
-  isLogin:true,
+  isLogin:false,
   isAdminLogin:false
 };
 
@@ -56,7 +56,7 @@ const usersReducers = (state = initialState, action) => {
         case types.USER_LOGGED_IN:
           return{
             ...state,
-            isLogin:action.payload
+            isLogin:true
           }
           case types.USER_LOGGED_OUT:
           return{

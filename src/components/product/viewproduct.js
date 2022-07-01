@@ -4,9 +4,10 @@ import { useDispatch } from "react-redux";
 import { useParams,useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import React, { useEffect } from "react";
-import { addProductToCart, getSingleProduct } from "../../redux/actions";
+//import { addProductToCart, getSingleProduct } from "../../redux/actions";
 import "../../assets/style/viewproduct.css";
 import arrow from "../../assets/image/arrowleft.svg"
+import { addProductToCart, getSingleProduct } from "../../action/productaction";
 
 export default function Viewproduct() {
   const navigate=useNavigate()

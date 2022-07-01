@@ -8,8 +8,8 @@
       "id": 1
     },
     {
-      "firstname": "Karthik",
-      "lastname": "Reghu",
+      "firstname": "K",
+      "lastname": "R",
       "email": "user",
       "password": "user",
       "id": 2
@@ -40,60 +40,11 @@
   ],
   "products": [
     {
-      "productname": "One Plus 10R",
-      "image": "https://m.media-amazon.com/images/I/716uVx3Wr5L._SX679_.jpg",
-      "color": "Forest Green",
-      "price": "37999",
+      "productname": "a",
+      "image": "a",
+      "color": "a",
+      "price": "123",
       "id": 1
-    },
-    {
-      "productname": "Samsung Galaxy S21 FE",
-      "image": "https://m.media-amazon.com/images/I/8131pwAojZL._SX679_.jpg",
-      "color": "Lavender",
-      "price": 54999,
-      "id": 2
-    },
-    {
-      "productname": "Marshall Acton II",
-      "image": "https://m.media-amazon.com/images/I/51Tn3qxqr3L._SX522_.jpg",
-      "color": "gold-black",
-      "price": 24999,
-      "id": 3
-    },
-    {
-      "productname": "Apple MacBook Air 2020",
-      "image": "https://m.media-amazon.com/images/I/71vFKBpKakL._SX679_.jpg",
-      "color": "Gold",
-      "price": "92900",
-      "id": 4
-    },
-    {
-      "productname": "MSI GeForce RTX 3090",
-      "image": "https://m.media-amazon.com/images/I/81f6GdD799L._SX522_.jpg",
-      "color": "Black",
-      "price": "182799",
-      "id": 5
-    },
-    {
-      "productname": "OnePlus 9 Pro",
-      "image": "https://m.media-amazon.com/images/I/612ytK4luvL._SX522_.jpg",
-      "color": "Pine Green",
-      "price": "54999",
-      "id": 6
-    },
-    {
-      "productname": "Samsung Galaxy Tab S8",
-      "image": "https://m.media-amazon.com/images/I/81Vs371KLML._SX679_.jpg",
-      "color": "Black",
-      "price": "58998",
-      "id": 7
-    },
-    {
-      "productname": "Google Pixel 3 XL",
-      "image": "https://m.media-amazon.com/images/I/51nnJx35lEL._SX679_.jpg",
-      "color": "Black",
-      "price": "23389",
-      "id": 8
     }
   ],
   "admin": [

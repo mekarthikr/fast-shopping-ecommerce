@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import "../../assets/style/home.css";
 import { useNavigate } from "react-router-dom";
-import { loadProducts,deleteProduct } from "../../redux/actions";
+// // import { loadProducts,deleteProduct } from "../../redux/actions";
+// loadProducts
 import { useDispatch, useSelector } from "react-redux";
 import "../../assets/style/adminPanel.css";
+import { loadProducts,deleteProduct } from "../../action/productaction";
 
 export default function Adminpanel() 
 {

@@ -6,7 +6,8 @@ import "../../assets/style/productlist.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getSingleUser } from "../../redux/actions";
+import { getSingleUser } from "../../action/useraction";
+// import { getSingleUser } from "../../redux/actions";
 
 export default function PersonList() {
   let navigate = useNavigate();

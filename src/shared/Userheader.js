@@ -10,12 +10,13 @@ import { userLoggedOut } from "../redux/actions";
 import { Tooltip } from "@mui/material";
 
 export default function UserHeader() {
-  const { isLogin, value, user } = useSelector((state) => state.user);
+  const { isLogin, user } = useSelector((state) => state.user);
+  const { value } = useSelector((state) => state.product);
   let dispatch = useDispatch();
   let navigate = useNavigate();
-  useEffect(() => {}, [isLogin, value]);
+  useEffect(() => { }, [isLogin, value]);
   function handlelogout(e) {
-    console.log(isLogin+value+user)
+    console.log(isLogin + value + user)
     dispatch(userLoggedOut());
     navigate("/login");
   }
