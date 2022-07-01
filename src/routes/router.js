@@ -13,6 +13,7 @@ import Viewproduct from "../components/product/viewproduct";
 import Cart from "../components/cart/cart";
 import UserProfile from "../components/user/userProfile";
 import  ValidateSession from "../validation/validateSession";
+import Footer from "../shared/footer";
 
 export function Router() {
   ValidateSession()
@@ -33,6 +34,7 @@ export function Router() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<UserProfile />} />
       </Routes>
+      <Footer/>
   </>
   );
 }

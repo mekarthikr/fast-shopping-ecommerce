@@ -32,16 +32,19 @@
 .cart-product-details button {
     margin: 5px 0px;
 }
+
 .cart-product-details h6 {
     position: absolute;
     right: 0;
     bottom: 0;
     margin: 5px 10px;
 }
-.cart-product-details img{
+
+.cart-product-details img {
     width: 20px;
     float: right;
 }
-.cart-img{
+
+.cart-img {
     width: 100%;
 }

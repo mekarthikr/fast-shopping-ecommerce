@@ -1,8 +1,8 @@
-import "../../assets/style/register.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/actions";
 import { useNavigate } from "react-router-dom";
+import "../../assets/style/register.css";
 
 export default function AddProduct() {
   const [state, setState] = useState({
@@ -11,17 +11,20 @@ export default function AddProduct() {
     color: "",
     price: "",
   });
+
   let dispatch = useDispatch();
   let navigate = useNavigate();
+
   const { productname, image, color, price } = state;
+
   const handleInputChange = (e) => {
     let { name, value } = e.target;
     setState({ ...state, [name]: value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!productname || !image || !color || !price) {
-   //   console.log("enter data");
     } else {
       dispatch(addProduct(state));
       navigate("/adminpanel");

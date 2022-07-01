@@ -1,3 +1,4 @@
+import { Alert } from "@mui/material";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
@@ -8,6 +9,8 @@ export default function Productcard(props) {
   let dispatch = useDispatch();
   const addToCart = (e) => {
     e.preventDefault();
+    // console.log("");
+    
     dispatch(addProductToCart(props.details));
   };
   return (
@@ -30,6 +33,7 @@ export default function Productcard(props) {
           <a className="btn bg-white">VIEW</a>
         </Link>
         <a className="btn bg-white float-right" onClick={addToCart}>
+        <Alert severity="success">This is a success alert — check it out!</Alert>
           ADD
         </a>
         </div>
