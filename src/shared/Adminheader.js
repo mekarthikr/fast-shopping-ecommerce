@@ -14,7 +14,7 @@ import { Tooltip } from "@mui/material";
 
 export default function Header() {
 
-  const { isLogin, value, user } = useSelector((state) => state.data)
+  const { isLogin, value, user } = useSelector((state) => state.user)
   let dispatch = useDispatch();
   let navigate = useNavigate();
   useEffect(() => { }, [isLogin, value])

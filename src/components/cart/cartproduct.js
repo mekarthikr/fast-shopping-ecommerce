@@ -1,15 +1,17 @@
+import { addProductToCart, removeProductFromCart } from "../../redux/actions";
 import { useDispatch } from "react-redux";
 import "../../assets/style/productcard.css";
-import { addProductToCart, removeProductFromCart } from "../../redux/actions";
 import "../../assets/style/cart.css";
 import close from "../../assets/image/close.png";
 
 export default function Cartproduct(props) {
   let dispatch = useDispatch();
+
   const addToCart = (e) => {
     e.preventDefault();
     dispatch(addProductToCart(props.details));
   };
+
   const removeFromCart = () => {
     dispatch(removeProductFromCart(props.details.id));
   };
@@ -21,6 +23,7 @@ export default function Cartproduct(props) {
   const decreacequant = () => {
     dispatch(removeProductFromCart(props.details.id));
   };
+
   return (
     <div className="cart-card">
       <div className="row">

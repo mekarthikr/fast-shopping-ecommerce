@@ -16,12 +16,13 @@ import UserHeader from "./Userheader";
 
 export default function Header() {
 
-  const { isLogin, value, user,  isAdminLogin } = useSelector((state) => state.data)
+  const { isLogin, value, user,  isAdminLogin } = useSelector((state) => state.user)
   let dispatch = useDispatch();
   let navigate = useNavigate();
   useEffect(() => { }, [isLogin, value])
   function navbarView()
   {
+    console.log("data:"+isLogin)
     if(isLogin)
     {
       return <UserHeader/>

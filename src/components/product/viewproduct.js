@@ -18,7 +18,7 @@ export default function Viewproduct() {
     color: "",
     price: "",
   });
-  const { product } = useSelector((state) => state.data);
+  const { product } = useSelector((state) => state.product);
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSingleProduct(id));

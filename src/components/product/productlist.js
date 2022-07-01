@@ -29,8 +29,8 @@ export default function PersonList() {
   useEffect(() => {
     getProducts();
   }, []);
-  const { user } = useSelector((state) => state.data);
-  const { value } = useSelector((state) => state.data);
+  const { user } = useSelector((state) => state.user);
+  const { value } = useSelector((state) => state.product);
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSingleUser(id));

@@ -1,11 +1,9 @@
-import "../../assets/style/register.css";
-import { useSelector } from "react-redux";
 import React from "react";
-import "../../assets/style/cart.css";
+import { useSelector } from "react-redux";
 import "../../assets/style/cartsummary.css";
 
 export default function Cartsummary() {
-  const { value } = useSelector((state) => state.data);
+  const { value } = useSelector((state) => state.product);
   const getTotal = (cartItem) => {
     const price = cartItem.reduce(
       (totalPrice, item) => totalPrice + parseInt(item.price),0);

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Home (){
-  const{isLogin}=useSelector((state)=>state.data)
+  const{isLogin}=useSelector((state)=>state.user)
   const navigate=useNavigate()
   function navigateTo()
   {

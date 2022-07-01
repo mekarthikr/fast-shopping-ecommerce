@@ -17,7 +17,7 @@ export default function Edituser() {
     email: "",
     password: "",
   });
-  const { user } = useSelector((state) => state.data);
+  const { user } = useSelector((state) => state.user);
   let dispatch = useDispatch();
   const { firstname, lastname, email, password } = state;
   useEffect(() => {

@@ -1,27 +1,33 @@
 import { useEffect } from "react";
 import "../../assets/style/home.css";
 import { useNavigate } from "react-router-dom";
-import { loadProducts } from "../../redux/actions";
+import { loadProducts,deleteProduct } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteProduct } from "../../redux/actions";
 import "../../assets/style/adminPanel.css";
 
-export default function Adminpanel() {
+export default function Adminpanel() 
+{
+
   let dispatch = useDispatch();
   let navigate = useNavigate();
-  const { products } = useSelector((state) => state.data);
+
+  const { products } = useSelector((state) => state.product);
   useEffect(() => {
     dispatch(loadProducts());
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   const handleDelete = (id) => {
     dispatch(deleteProduct(id));
   };
+
   function handleEdit(id) {
     navigate(`/editproduct/${id}`);
   }
+
   function addProduct() {
     navigate("/addProduct");
   }
+
   return (
     <>
       <button className="admin-button" onClick={() => addProduct()}>

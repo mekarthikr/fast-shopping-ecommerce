@@ -1,23 +1,21 @@
 import React, { useEffect } from "react";
 import "../assets/style/header.css";
-import coll from "../assets/image/coll.svg";
-import remove from "../assets/image/bag.svg";
 import userprof from "../assets/image/profile.svg";
 import logout from "../assets/image/logout.svg";
 import cart from "../assets/image/cart.svg";
 import cartempty from "../assets/image/cartempty.svg";
-import add from "../assets/image/add.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userLoggedOut } from "../redux/actions";
 import { Tooltip } from "@mui/material";
 
 export default function UserHeader() {
-  const { isLogin, value, user } = useSelector((state) => state.data);
+  const { isLogin, value, user } = useSelector((state) => state.user);
   let dispatch = useDispatch();
   let navigate = useNavigate();
   useEffect(() => {}, [isLogin, value]);
   function handlelogout(e) {
+    console.log(isLogin+value+user)
     dispatch(userLoggedOut());
     navigate("/login");
   }

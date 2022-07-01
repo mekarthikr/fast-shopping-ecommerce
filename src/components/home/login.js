@@ -47,6 +47,7 @@ function Login() {
       setError("Invalid Login Credentials")
     }
   };
+
   return (
     <>
       <div className="login-block">
@@ -77,7 +78,6 @@ function Login() {
             SIGN IN{""}
           </button>
         </form>
-
         <p className="line color-blue">
           <span>or</span>
         </p>

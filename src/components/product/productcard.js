@@ -33,7 +33,6 @@ export default function Productcard(props) {
           <a className="btn bg-white">VIEW</a>
         </Link>
         <a className="btn bg-white float-right" onClick={addToCart}>
-        <Alert severity="success">This is a success alert — check it out!</Alert>
           ADD
         </a>
         </div>

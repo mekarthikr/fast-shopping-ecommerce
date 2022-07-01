@@ -2,9 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { API_ADMIN } from "../../api/api";
 import { useNavigate } from "react-router-dom";
-import "../../assets/style/admin.css";
 import { useDispatch } from "react-redux";
 import { userLoggedIn } from "../../redux/actions";
+import "../../assets/style/admin.css";
 
 export function Admin() {
   let navigate = useNavigate();
@@ -42,8 +42,8 @@ export function Admin() {
       navigate("/adminpanel", { profile });
     } 
   };
+
   return (
-    <>
       <div className="admin-block">
         <h1> Welcome Admin </h1>
         <p>Please login to continue</p>
@@ -72,6 +72,5 @@ export function Admin() {
           </button>
         </form>
       </div>
-    </>
   );
 }
