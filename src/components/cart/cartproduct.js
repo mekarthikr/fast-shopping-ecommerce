@@ -1,5 +1,6 @@
-import { addProductToCart, removeProductFromCart } from "../../redux/actions";
+import { removeProductFromCart } from "../../redux/actions";
 import { useDispatch } from "react-redux";
+
 import "../../assets/style/productcard.css";
 import "../../assets/style/cart.css";
 import close from "../../assets/image/close.png";
@@ -7,20 +8,7 @@ import close from "../../assets/image/close.png";
 export default function Cartproduct(props) {
   let dispatch = useDispatch();
 
-  const addToCart = (e) => {
-    e.preventDefault();
-    dispatch(addProductToCart(props.details));
-  };
-
   const removeFromCart = () => {
-    dispatch(removeProductFromCart(props.details.id));
-  };
-
-  const increacequant = () => {
-    dispatch(removeProductFromCart(props.details.id));
-  };
-
-  const decreacequant = () => {
     dispatch(removeProductFromCart(props.details.id));
   };
 
@@ -36,8 +24,6 @@ export default function Cartproduct(props) {
           <p>{props.details.color}</p>
           <h6 className="float-right inline">{props.details.price}</h6>
           <p>{props.details.quantity}</p>
-          <button onClick={increacequant}>add</button>
-          <button onClick={decreacequant}>add</button>
         </div>
       </div>
       <hr />

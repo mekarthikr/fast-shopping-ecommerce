@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { updateProduct, getSingleProduct } from "../../redux/actions";
-// updateProduct
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { updateProduct,getSingleProduct } from "../../action/productaction";
+import { updateProduct, getSingleProduct } from "../../action/productaction";
+
 import "../../assets/style/editproduct.css";
 import "../../assets/style/register.css";
 
@@ -106,10 +105,7 @@ export default function Editproduct() {
             </div>
           </div>
         </div>
-        <button type="submit" className="login-button">
-          {" "}
-          UPDATE{" "}
-        </button>
+        <button type="submit" className="login-button">UPDATE</button>
       </form>
     </div>
   );

@@ -1,24 +1,27 @@
+
+import UserHeader from "./Userheader";
 import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { userLoggedOut } from "../action/useraction";
+
 import "../assets/style/header.css";
 import coll from "../assets/image/coll.svg";
 import remove from "../assets/image/bag.svg";
-import { Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { userLoggedOut } from "../redux/actions";
-import UserHeader from "./Userheader";
 
 export default function Header() {
 
-  const { isLogin, value, user,  isAdminLogin } = useSelector((state) => state.user)
+  const { isLogin, value, user, isAdminLogin } = useSelector((state) => state.user)
+
   let dispatch = useDispatch();
   let navigate = useNavigate();
+
   useEffect(() => { }, [isLogin, value])
-  function navbarView()
-  {
-    console.log("data:"+isLogin)
-    if(isLogin)
-    {
-      return <UserHeader/>
+
+  function navbarView() {
+    console.log("data:" + isLogin)
+    if (isLogin) {
+      return <UserHeader />
     }
     // else if(isAdminLogin)
     // {
@@ -33,7 +36,6 @@ export default function Header() {
   // }
 
   return (
-    <>
       <nav className="navbar navbar-expand-lg navbar-light nav-bar">
         <a className="navbar-brand" >
           <img src={remove} width="40" height="40" className="" alt="img" />
@@ -55,11 +57,10 @@ export default function Header() {
             <img src={coll} className="icon" width={"60px"} alt="img" />
           </span>
         </button>
-        { navbarView()
+        {navbarView()
 
         }
       </nav>
-    </>
   );
 
 }

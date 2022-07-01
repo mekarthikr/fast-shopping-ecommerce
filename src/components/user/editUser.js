@@ -1,36 +1,46 @@
-import "../../assets/style/register.css";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
 import React, { useEffect } from "react";
-import { updateUser,getSingleUser,userLoggedOut } from "../../action/useraction";
+import { useState } from "react";
+import { useDispatch ,useSelector} from "react-redux";
+import { useLocation ,useNavigate} from "react-router-dom"
+import "../../assets/style/register.css";
+
+import {
+  updateUser,
+  getSingleUser,
+  userLoggedOut,
+} from "../../action/useraction";
 
 export default function Edituser() {
+
   const location = useLocation();
   let navigate = useNavigate();
+
   const [state, setState] = useState({
     firstname: "",
     lastname: "",
     email: "",
     password: "",
   });
+
   const { user } = useSelector((state) => state.user);
   let dispatch = useDispatch();
   const { firstname, lastname, email, password } = state;
+
   useEffect(() => {
     dispatch(getSingleUser(location.state.id));
-  },[]);
+  }, []);
+
   useEffect(() => {
     if (user) {
       setState({ ...user });
     }
   }, [user]);
+
   const handleInputChange = (e) => {
     let { name, value } = e.target;
     setState({ ...state, [name]: value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!firstname || !lastname || !email || !password) {
@@ -38,10 +48,11 @@ export default function Edituser() {
     } else {
       dispatch(updateUser(state, location.state.id));
       localStorage.clear();
-      dispatch(userLoggedOut())
+      dispatch(userLoggedOut());
       navigate("/login");
     }
   };
+
   return (
     <>
       <div className="login-block">
@@ -90,10 +101,7 @@ export default function Edituser() {
               onChange={handleInputChange}
             />
           </div>
-          <button type="submit" className="login-button">
-            {" "}
-            UPDATE{" "}
-          </button>
+          <button type="submit" className="login-button">UPDATE</button>
         </form>
       </div>
     </>

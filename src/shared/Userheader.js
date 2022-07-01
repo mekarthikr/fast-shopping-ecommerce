@@ -1,22 +1,25 @@
 import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+// import { userLoggedOut } from "../redux/actions";  admin logout have to be added
+import { Tooltip } from "@mui/material";
 import "../assets/style/header.css";
 import userprof from "../assets/image/profile.svg";
 import logout from "../assets/image/logout.svg";
 import cart from "../assets/image/cart.svg";
 import cartempty from "../assets/image/cartempty.svg";
-import { Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { userLoggedOut } from "../redux/actions";
-import { Tooltip } from "@mui/material";
 
 export default function UserHeader() {
   const { isLogin, user } = useSelector((state) => state.user);
   const { value } = useSelector((state) => state.product);
+
   let dispatch = useDispatch();
   let navigate = useNavigate();
-  useEffect(() => { }, [isLogin, value]);
+
+  useEffect(() => {}, [isLogin, value]);
+
   function handlelogout(e) {
-    console.log(isLogin + value + user)
+    console.log(isLogin + value + user);
     dispatch(userLoggedOut());
     navigate("/login");
   }

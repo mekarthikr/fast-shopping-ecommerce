@@ -2,6 +2,7 @@ import React from "react";
 import Cartproduct from "./cartproduct";
 import Cartsummary from "./cartSummary";
 import { useSelector } from "react-redux";
+
 import "../../assets/style/cart.css";
 
 

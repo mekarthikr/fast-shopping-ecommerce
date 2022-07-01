@@ -6,10 +6,12 @@ import "../../assets/style/userProfile.css"
 export default function UserProfile() {
     let navigate = useNavigate();
     const { user } = useSelector((state) => state.user)
+
     const editHandle = (e) => {
         e.preventDefault();
         navigate("/edit", { state: user });
     };
+    
     return (
         <div className="profile-user bg-white">
             <h1 className="color-blue">ACCOUNT PROFILE</h1>
@@ -31,10 +33,7 @@ export default function UserProfile() {
                     </div>
                 </div>
             </div>
-            <button style={{margin:"5% 40% 0 40%",width:"20%"}} className="bg-blue color-white" onClick={editHandle}>
-                {" "}
-                Edit Profile{" "}
-            </button>
+            <button style={{ margin: "5% 40% 0 40%", width: "20%" }} className="bg-blue color-white" onClick={editHandle}>Edit Profile</button>
         </div>
     )
 }

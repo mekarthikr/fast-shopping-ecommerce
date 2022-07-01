@@ -1,13 +1,12 @@
-import { API_PRODUCTS } from "../../api/api";
 import React from "react";
 import axios from "axios";
 import Productcard from "./productcard";
-import "../../assets/style/productlist.css";
+import { API_PRODUCTS } from "../../api/api";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getSingleUser } from "../../action/useraction";
-// import { getSingleUser } from "../../redux/actions";
+import "../../assets/style/productlist.css";
 
 export default function PersonList() {
   let navigate = useNavigate();
@@ -19,6 +18,7 @@ export default function PersonList() {
   });
   const [products, setStateProduct] = useState([]);
   const id = localStorage.getItem("id");
+
   function getProducts() {
     axios
       .get(API_PRODUCTS)
@@ -27,11 +27,14 @@ export default function PersonList() {
         setStateProduct(data);
       });
   }
+
   useEffect(() => {
     getProducts();
   }, []);
+
   const { user } = useSelector((state) => state.user);
   const { value } = useSelector((state) => state.product);
+
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSingleUser(id));
@@ -42,10 +45,7 @@ export default function PersonList() {
       setState({ ...user });
     }
   }, [user]); // eslint-disable-line react-hooks/exhaustive-deps
-  const editHandle = (e) => {
-    e.preventDefault();
-    navigate("/edit", { state: state });
-  };
+
   return (
     <div className="main-container profile">
       <div className="main-container row">

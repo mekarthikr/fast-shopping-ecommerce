@@ -1,14 +1,12 @@
 import { useEffect } from "react";
-import "../../assets/style/home.css";
 import { useNavigate } from "react-router-dom";
-// // import { loadProducts,deleteProduct } from "../../redux/actions";
-// loadProducts
 import { useDispatch, useSelector } from "react-redux";
-import "../../assets/style/adminPanel.css";
-import { loadProducts,deleteProduct } from "../../action/productaction";
+import { loadProducts, deleteProduct } from "../../action/productaction";
 
-export default function Adminpanel() 
-{
+import "../../assets/style/adminPanel.css";
+import "../../assets/style/home.css";
+
+export default function Adminpanel() {
 
   let dispatch = useDispatch();
   let navigate = useNavigate();
@@ -37,7 +35,6 @@ export default function Adminpanel()
       </button>
       <button className="admin-button">LOGOUT</button>
       <div className="product card">
-        <>
           {products &&
             products.map((product) => {
               return (
@@ -53,7 +50,6 @@ export default function Adminpanel()
                 </div>
               );
             })}
-        </>
       </div>
     </>
   );
